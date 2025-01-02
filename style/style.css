@@ -1,7 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   background-color: #f5f5f5;
+  font-family: "Libre Baskerville", Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #212121;
+}
+a:hover {
+  color: #616161;
+}
+
+input {
+  font-size: 2rem;
+}
+
+::-moz-placeholder {
+  font-family: "Libre Baskerville", Helvetica, sans-serif;
+  color: rgba(33, 33, 33, 0.6);
+  opacity: 1; /* Firefox changes the opacity on the placeholder, so we change it back. */
+}
+
+::placeholder {
+  font-family: "Libre Baskerville", Helvetica, sans-serif;
+  color: rgba(33, 33, 33, 0.6);
+  opacity: 1; /* Firefox changes the opacity on the placeholder, so we change it back. */
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 10vh;
+  box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+  font-size: 2rem;
+}
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 125rem;
+  margin: auto;
+}
+header .logo-search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header img {
+  width: 16.3rem;
+  height: 4.4rem;
+}
+header form {
+  position: relative;
+  margin-left: 4rem;
+}
+header form input {
+  width: 40rem;
+  height: 5rem;
+  padding-left: 6rem;
+  border-radius: 3rem;
+  border: none;
+}
+header form::before {
+  content: url("../icon/iconmonstr-magnifier.svg");
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  top: 50%;
+  left: 1.8rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+header form:hover ::-moz-placeholder {
+  color: rgba(33, 33, 33, 0.8);
+}
+header form:hover ::placeholder {
+  color: rgba(33, 33, 33, 0.8);
+}
+header nav {
+  width: 35rem;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1250px) {
+  header {
+    padding: 0 5rem;
+  }
+  header .header-content {
+    width: 100%;
+    margin: 0;
+  }
+  header form {
+    margin-left: 4.2vw;
+  }
+  header form input {
+    width: 32vw;
+  }
+  header nav {
+    width: calc(25rem + 8vw);
+  }
 }/*# sourceMappingURL=style.css.map */

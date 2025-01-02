@@ -1,0 +1,76 @@
+header {
+  @include flex(normal, center, column);
+  min-height: 10vh;
+  // Got this from: https://getcssscan.com/css-box-shadow-examples
+  box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px,
+    rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.04) 0px 6px 6px -3px,
+    rgba(14, 63, 126, 0.04) 0px 12px 12px -6px,
+    rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+  font-size: $nav-font;
+  .header-content {
+    @include flex(center, space-between, row);
+    width: 125rem;
+    margin: auto;
+  }
+  .logo-search-container {
+    @include flex(center, space-between, row);
+  }
+  img {
+    width: 16.3rem;
+    height: 4.4rem;
+  }
+  form {
+    position: relative;
+    margin-left: 4rem;
+    input {
+      width: 40rem;
+      height: 5rem;
+      padding-left: 6rem;
+      border-radius: 3rem;
+      border: none;
+    }
+    &::before {
+      content: url("../icon/iconmonstr-magnifier.svg");
+      width: 2.4rem;
+      height: 2.4rem;
+      position: absolute;
+      top: 50%;
+      left: 1.8rem;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    &:hover {
+      ::placeholder {
+        color: $font-color-opacity-80;
+      }
+    }
+  }
+  nav {
+    width: 35rem;
+    ul {
+      @include flex(center, space-between, row);
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  header {
+    padding: 0 5rem;
+    .header-content {
+      width: 100%;
+      margin: 0;
+    }
+    form {
+      margin-left: 4.2vw;
+      input {
+        // 32vw is 40rem when the viewport width is 1250px.
+        width: 32vw;
+      }
+    }
+    nav {
+      width: calc(25rem + 8vw);
+    }
+  }
+}
