@@ -32,6 +32,8 @@ $footer-font: 2rem;
 $p-font: 1.8rem;
 $p-subheading: 1.6rem;
 
+$button-font: 2rem;
+
 // Functions
 
 @mixin flex($align, $justify, $direction) {
@@ -77,6 +79,15 @@ input {
   opacity: 1; /* Firefox changes the opacity on the placeholder, so we change it back. */
 }
 
+button {
+  border: none;
+  background: none;
+  font-family: "Libre Baskerville", Helvetica, sans-serif;
+  color: $font-color;
+  font-size: $button-font;
+  cursor: pointer;
+}
+
 .hidden {
-  display: none;
+  display: none !important;
 }

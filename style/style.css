@@ -38,8 +38,17 @@ input {
   opacity: 1; /* Firefox changes the opacity on the placeholder, so we change it back. */
 }
 
+button {
+  border: none;
+  background: none;
+  font-family: "Libre Baskerville", Helvetica, sans-serif;
+  color: #212121;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 header {
@@ -47,7 +56,8 @@ header {
   align-items: normal;
   justify-content: center;
   flex-direction: column;
-  min-height: 10vh;
+  position: relative;
+  z-index: 3;
   box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
   font-size: 2rem;
 }
@@ -58,6 +68,8 @@ header .header-content {
   flex-direction: row;
   width: 125rem;
   margin: auto;
+  background-color: #f5f5f5;
+  min-height: 10vh;
 }
 header .logo-search-container {
   display: flex;
@@ -105,14 +117,53 @@ header nav ul {
   justify-content: space-between;
   flex-direction: row;
 }
+header .sveriges-godaste-hamburgare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 16.4rem;
+  padding: 2rem 0;
+  display: none;
+}
+header .sveriges-godaste-hamburgare .menu {
+  margin-right: 1.8rem;
+}
+header .sveriges-godaste-hamburgare .line-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 3.3rem;
+  height: 2.2rem;
+}
+header .sveriges-godaste-hamburgare .line-container .line {
+  width: 3.3rem;
+  height: 0.2rem;
+  background-color: #212121;
+  transition: all 0.75s ease;
+}
+header .sveriges-godaste-hamburgare .line-container .line.open:nth-child(1) {
+  transform: translateY(500%) rotate(45deg);
+}
+header .sveriges-godaste-hamburgare .line-container .line.open:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+}
+header .sveriges-godaste-hamburgare .line-container .line.open:nth-child(3) {
+  top: 50%;
+  transform: translateY(-500%) rotate(-45deg);
+}
+header .sveriges-godaste-hamburgare:hover .menu {
+  color: #616161;
+}
 
 @media screen and (max-width: 1250px) {
-  header {
-    padding: 0 5rem;
-  }
   header .header-content {
     width: 100%;
     margin: 0;
+    padding: 0 5rem;
   }
   header form {
     margin-left: 4.2vw;
@@ -122,5 +173,56 @@ header nav ul {
   }
   header nav {
     width: calc(25rem + 8vw);
+  }
+}
+@media screen and (max-width: 950px) {
+  header nav {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    display: none;
+  }
+  header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 25rem;
+    background-color: #ffffff;
+  }
+  header nav.showNavbarAnimation {
+    animation: showNavbar 0.5s;
+  }
+  header nav.hideNavbarAnimation {
+    animation: hideNavbar 0.5s;
+  }
+  header nav.display {
+    display: block;
+  }
+  header .sveriges-godaste-hamburgare {
+    display: flex;
+  }
+}
+@keyframes showNavbar {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+}
+@keyframes hideNavbar {
+  from {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

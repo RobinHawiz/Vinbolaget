@@ -1,6 +1,7 @@
 header {
   @include flex(normal, center, column);
-  min-height: 10vh;
+  position: relative;
+  z-index: 3;
   // Got this from: https://getcssscan.com/css-box-shadow-examples
   box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px,
     rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px,
@@ -13,6 +14,8 @@ header {
     @include flex(center, space-between, row);
     width: 125rem;
     margin: auto;
+    background-color: $primary-color;
+    min-height: 10vh;
   }
   .logo-search-container {
     @include flex(center, space-between, row);
@@ -53,14 +56,54 @@ header {
       @include flex(center, space-between, row);
     }
   }
+  .sveriges-godaste-hamburgare {
+    @include flex(center, center, row);
+    width: 16.4rem;
+    padding: 2rem 0;
+    display: none;
+    .menu {
+      margin-right: 1.8rem;
+    }
+    .line-container {
+      position: relative;
+      @include flex(center, space-between, column);
+      width: 3.3rem;
+      height: 2.2rem;
+      .line {
+        width: 3.3rem;
+        height: 0.2rem;
+        background-color: $font-color;
+        transition: all 0.75s ease;
+      }
+      .line.open {
+        &:nth-child(1) {
+          transform: translateY(500%) rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          top: 50%;
+          transform: translateY(-500%) rotate(-45deg);
+        }
+      }
+    }
+
+    &:hover {
+      .menu {
+        color: $links-color-hover;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1250px) {
   header {
-    padding: 0 5rem;
     .header-content {
       width: 100%;
       margin: 0;
+      padding: 0 5rem;
     }
     form {
       margin-left: 4.2vw;
@@ -72,5 +115,59 @@ header {
     nav {
       width: calc(25rem + 8vw);
     }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    nav {
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      display: none;
+      ul {
+        @include flex(center, space-around, column);
+        height: 25rem;
+        background-color: $secondary-color;
+      }
+
+      &.showNavbarAnimation {
+        animation: showNavbar 0.5s;
+      }
+      &.hideNavbarAnimation {
+        animation: hideNavbar 0.5s;
+      }
+      &.display {
+        display: block;
+      }
+    }
+    .sveriges-godaste-hamburgare {
+      display: flex;
+    }
+  }
+}
+
+@keyframes showNavbar {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes hideNavbar {
+  from {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0);
   }
 }
