@@ -44,6 +44,9 @@ main.startsida {
       &:hover {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         transform: translateY(-0.2rem);
+        a p.title {
+          text-decoration: underline;
+        }
       }
     }
     a {
@@ -65,6 +68,51 @@ main.startsida {
       }
     }
   }
+
+  section.latest-news {
+    margin-bottom: 10rem;
+    h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    p.h2-subheading {
+      margin-bottom: 5rem;
+      text-align: center;
+    }
+    .news {
+      @include grid(
+        $columns: repeat(3, 28rem),
+        $column-gap: 9rem,
+        $row-gap: 3rem,
+        $justify: center
+      );
+      article {
+        height: 45rem;
+        background-color: $secondary-color;
+        border-radius: 1.5rem;
+        transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        &:hover {
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          transform: translateY(-0.2rem);
+          h3 {
+            text-decoration: underline;
+          }
+        }
+      }
+      .content {
+        padding: 2rem 2rem;
+      }
+      p.date {
+        color: $font-color-opacity-80;
+        font-size: $p-subheading-font;
+      }
+      h3 {
+        margin-top: 1rem;
+        font-weight: 400;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1250px) {
@@ -76,9 +124,19 @@ main.startsida {
     section.landing-page {
       padding: 0 5rem;
     }
-    section.most-sold-products {
-      .products {
-        column-gap: calc(15vw - 10rem);
+    section.most-sold-products .products,
+    section.latest-news .news {
+      column-gap: calc(15vw - 10rem);
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  main.startsida {
+    section.latest-news {
+      .news {
+        grid-template-columns: repeat(2, 28rem);
+        column-gap: calc(10vw - 5rem);
       }
     }
   }
@@ -88,11 +146,29 @@ main.startsida {
   main.startsida {
     section.most-sold-products {
       .products {
+        grid-template-columns: repeat(2, 25rem);
+        column-gap: calc(10vw - 5rem);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main.startsida {
+    section.latest-news {
+      .news {
+        grid-template-columns: repeat(1, 28rem);
+      }
+    }
+    section.most-sold-products {
+      .products {
         grid-template-columns: repeat(1, 25rem);
       }
     }
   }
 }
+
+// Styling for mobile
 
 @media screen and (max-width: 480px) {
   main.startsida {
@@ -116,6 +192,21 @@ main.startsida {
       a {
         p.country {
           font-size: $p-mobile-subheading-font;
+        }
+      }
+    }
+    section.latest-news {
+      .news {
+        p.date {
+          font-size: $p-mobile-subheading-font;
+        }
+      }
+    }
+    section.latest-news {
+      .news {
+        grid-template-columns: repeat(1, 21.8rem);
+        article {
+          height: 35rem;
         }
       }
     }

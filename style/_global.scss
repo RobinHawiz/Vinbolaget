@@ -25,6 +25,8 @@ $h1-subheading-font: 2.4rem;
 $h2-font: 3.2rem;
 $h2-subheading-font: 2rem;
 
+$h3-font: 1.8rem;
+
 $nav-font: 2rem;
 
 $footer-font: 2rem;
@@ -40,6 +42,9 @@ $h1-mobile-font: calc($h1-font - 2.2rem);
 $h1-mobile-subheading-font: calc($h1-subheading-font - 0.6rem);
 
 $h2-mobile-font: calc($h2-font - 0.8rem);
+$h2-mobile-subheading-font: calc($h2-subheading-font - 0.2rem);
+
+$h3-mobile-font: calc($h3-font - 0.2rem);
 
 $p-mobile-font: calc($p-font - 0.2rem);
 $p-mobile-subheading-font: calc($p-subheading-font - 0.2rem);
@@ -102,6 +107,14 @@ h2 {
   font-weight: 400;
 }
 
+p.h2-subheading {
+  font-size: $h2-subheading-font;
+}
+
+h3 {
+  font-size: $h3-font;
+}
+
 p {
   font-size: $p-font;
 }
@@ -148,6 +161,13 @@ span.divider {
   margin: 2rem 0;
 }
 
+// The <picture> element makes the images display: inline. So I revert them back to display: block. Otherwise we get mysterious white space under each image.
+img {
+  display: block;
+}
+
+// Styling for mobile
+
 @media screen and (max-width: 480px) {
   h1 {
     font-size: $h1-mobile-font;
@@ -160,5 +180,11 @@ span.divider {
   }
   h2 {
     font-size: $h2-mobile-font;
+  }
+  p.h2-subheading {
+    font-size: $h2-mobile-subheading-font;
+  }
+  h3 {
+    font-size: $h3-mobile-font;
   }
 }
