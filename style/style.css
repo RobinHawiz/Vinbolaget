@@ -23,11 +23,21 @@ p.subheading {
   font-size: 2.4rem;
 }
 
+h2 {
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
 a {
   text-decoration: none;
   color: #212121;
 }
-a:hover {
+
+a.link:hover {
   color: #616161;
 }
 
@@ -72,8 +82,14 @@ span.divider {
   h1 {
     font-size: 2.6rem;
   }
+  p {
+    font-size: 1.6rem;
+  }
   p.subheading {
     font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 2.4rem;
   }
 }
 main.startsida {
@@ -97,6 +113,7 @@ main.startsida section.landing-page {
   align-items: center;
   justify-content: normal;
   flex-direction: column;
+  margin-bottom: 10rem;
 }
 main.startsida section.landing-page .headline {
   display: flex;
@@ -104,6 +121,53 @@ main.startsida section.landing-page .headline {
   justify-content: normal;
   flex-direction: column;
   text-align: center;
+}
+main.startsida section.most-sold-products {
+  margin-bottom: 10rem;
+}
+main.startsida section.most-sold-products h2 {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+main.startsida section.most-sold-products .products {
+  display: grid;
+  row-gap: 3rem;
+  -moz-column-gap: 9rem;
+       column-gap: 9rem;
+  grid-template-columns: repeat(3, 25rem);
+  justify-content: center;
+}
+main.startsida section.most-sold-products .product {
+  height: 39rem;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+main.startsida section.most-sold-products .product:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translateY(-0.2rem);
+}
+main.startsida section.most-sold-products a {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  height: 100%;
+}
+main.startsida section.most-sold-products a img {
+  margin-top: 1rem;
+}
+main.startsida section.most-sold-products a p.country {
+  font-size: 1.6rem;
+  color: rgba(33, 33, 33, 0.8);
+  letter-spacing: 0.23rem;
+  margin: 2rem 0;
+}
+main.startsida section.most-sold-products a p.description {
+  color: rgba(33, 33, 33, 0.8);
+  margin-top: 0.5rem;
+  margin-bottom: 4.5rem;
 }
 
 @media screen and (max-width: 1250px) {
@@ -116,11 +180,35 @@ main.startsida section.landing-page .headline {
   main.startsida section.landing-page {
     padding: 0 5rem;
   }
+  main.startsida section.most-sold-products .products {
+    -moz-column-gap: calc(15vw - 10rem);
+         column-gap: calc(15vw - 10rem);
+  }
+}
+@media screen and (max-width: 840px) {
+  main.startsida section.most-sold-products .products {
+    grid-template-columns: repeat(1, 25rem);
+  }
 }
 @media screen and (max-width: 480px) {
   main.startsida .banner-wrapper {
     width: 39rem;
     height: 9.4rem;
+  }
+  main.startsida section.landing-page {
+    margin-bottom: 6.5rem;
+  }
+  main.startsida section.most-sold-products h2 {
+    margin-bottom: 3rem;
+  }
+  main.startsida section.most-sold-products .products {
+    grid-template-columns: repeat(1, 21.6rem);
+  }
+  main.startsida section.most-sold-products .product {
+    height: 30.8rem;
+  }
+  main.startsida section.most-sold-products a p.country {
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 390px) {
@@ -309,7 +397,6 @@ header .sveriges-godaste-hamburgare:hover .menu {
   }
   header form.inside-nav {
     display: block;
-    margin: 3rem 0;
   }
   header form.inside-nav input {
     width: 25rem;

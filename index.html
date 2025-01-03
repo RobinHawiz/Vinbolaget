@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- Makes the loading of google fonts non-render blocking -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the loading of google fonts non-render blocking -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
       <link
-        rel="preload"
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
-        as="style"
-        onload="this.onload=null;this.rel='stylesheet'"
+        rel="stylesheet"
+        type="text/css"
       />
-      <noscript>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
-          rel="stylesheet"
-          type="text/css"
-        />
-      </noscript>
-      <link rel="stylesheet" href="style/style.css" />
-      <link rel="icon" type="image/x-icon" href="icon/favicon.ico" />
-      <title>Vinbolaget</title>
-    </head>
+    </noscript>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="icon" type="image/x-icon" href="icon/favicon.ico" />
+    <title>Vinbolaget</title>
   </head>
   <body>
     <header>
@@ -53,17 +51,19 @@
         </button>
         <nav class="hideNavbarAnimation">
           <ul>
-            <li><a href="#">Om Vinbolaget</a></li>
-            <li><a href="#">Viner</a></li>
-            <li><a href="#">Varukorg</a></li>
-            <!-- Is shown only at max-width: 640px -->
-            <form
-              class="inside-nav"
-              action="viner/viner.html"
-              autocomplete="off"
-            >
-              <input type="search" name="search" placeholder="Sök vin..." />
-            </form>
+            <li><a class="link" href="#">Om Vinbolaget</a></li>
+            <li><a class="link" href="#">Viner</a></li>
+            <li><a class="link" href="#">Varukorg</a></li>
+            <li>
+              <!-- Is shown only at max-width: 640px -->
+              <form
+                class="inside-nav"
+                action="viner/viner.html"
+                autocomplete="off"
+              >
+                <input type="search" name="search" placeholder="Sök vin..." />
+              </form>
+            </li>
           </ul>
         </nav>
       </div>
@@ -105,6 +105,164 @@
             Vi är Sveriges ledande nätbutik för kvalitetsviner
           </p>
         </div>
+      </section>
+      <section class="most-sold-products">
+        <h2>Våra mest sålda drycker</h2>
+        <ul class="products">
+          <li class="product">
+            <a href="#">
+              <div class="product-img-wrapper">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(max-width: 480px)"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage-mobile@1x.webp 1x,
+                      img/products/bardolino/bardolino-homepage-mobile@2x.webp 2x,
+                      img/products/bardolino/bardolino-homepage-mobile@3x.webp 3x
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    media="(max-width: 480px)"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage-mobile@1x.png 1x,
+                      img/products/bardolino/bardolino-homepage-mobile@2x.png 2x,
+                      img/products/bardolino/bardolino-homepage-mobile@3x.png 3x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage@1x.webp 1x,
+                      img/products/bardolino/bardolino-homepage@2x.webp 2x,
+                      img/products/bardolino/bardolino-homepage@3x.webp 3x
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage@1x.png 1x,
+                      img/products/bardolino/bardolino-homepage@2x.png 2x,
+                      img/products/bardolino/bardolino-homepage@3x.png 3x
+                    "
+                  />
+                  <img
+                    src="img/products/bardolino/bardolino-homepage@1x.png"
+                    alt="Vinflaskan Bardolino"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <p class="country">Italien</p>
+              <p class="title">La Corde del Pozzo</p>
+              <p class="description">Bardolino</p>
+              <p class="price">3000:-</p>
+            </a>
+          </li>
+          <li class="product">
+            <a href="#">
+              <div class="product-img-wrapper">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(max-width: 480px)"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage-mobile@1x.webp 1x,
+                      img/products/bardolino/bardolino-homepage-mobile@2x.webp 2x,
+                      img/products/bardolino/bardolino-homepage-mobile@3x.webp 3x
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    media="(max-width: 480px)"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage-mobile@1x.png 1x,
+                      img/products/bardolino/bardolino-homepage-mobile@2x.png 2x,
+                      img/products/bardolino/bardolino-homepage-mobile@3x.png 3x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage@1x.webp 1x,
+                      img/products/bardolino/bardolino-homepage@2x.webp 2x,
+                      img/products/bardolino/bardolino-homepage@3x.webp 3x
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage@1x.png 1x,
+                      img/products/bardolino/bardolino-homepage@2x.png 2x,
+                      img/products/bardolino/bardolino-homepage@3x.png 3x
+                    "
+                  />
+                  <img
+                    src="img/products/bardolino/bardolino-homepage@1x.png"
+                    alt="Vinflaskan Bardolino"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <p class="country">Italien</p>
+              <p class="title">La Corde del Pozzo</p>
+              <p class="description">Bardolino</p>
+              <p class="price">3000:-</p>
+            </a>
+          </li>
+          <li class="product">
+            <a href="#">
+              <div class="product-img-wrapper">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(max-width: 480px)"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage-mobile@1x.webp 1x,
+                      img/products/bardolino/bardolino-homepage-mobile@2x.webp 2x,
+                      img/products/bardolino/bardolino-homepage-mobile@3x.webp 3x
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    media="(max-width: 480px)"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage-mobile@1x.png 1x,
+                      img/products/bardolino/bardolino-homepage-mobile@2x.png 2x,
+                      img/products/bardolino/bardolino-homepage-mobile@3x.png 3x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage@1x.webp 1x,
+                      img/products/bardolino/bardolino-homepage@2x.webp 2x,
+                      img/products/bardolino/bardolino-homepage@3x.webp 3x
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      img/products/bardolino/bardolino-homepage@1x.png 1x,
+                      img/products/bardolino/bardolino-homepage@2x.png 2x,
+                      img/products/bardolino/bardolino-homepage@3x.png 3x
+                    "
+                  />
+                  <img
+                    src="img/products/bardolino/bardolino-homepage@1x.png"
+                    alt="Vinflaskan Bardolino"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <p class="country">Italien</p>
+              <p class="title">La Corde del Pozzo</p>
+              <p class="description">Bardolino</p>
+              <p class="price">3000:-</p>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
     <footer></footer>

@@ -14,10 +14,55 @@ main.startsida {
   }
   section.landing-page {
     @include flex(center, normal, column);
-
+    margin-bottom: 10rem;
     .headline {
       @include flex(center, normal, column);
       text-align: center;
+    }
+  }
+
+  section.most-sold-products {
+    margin-bottom: 10rem;
+    h2 {
+      margin-bottom: 5rem;
+      text-align: center;
+    }
+    .products {
+      @include grid(
+        $columns: repeat(3, 25rem),
+        $column-gap: 9rem,
+        $row-gap: 3rem,
+        $justify: center
+      );
+    }
+    .product {
+      height: 39rem;
+      border-radius: 1.5rem;
+      background-color: $secondary-color;
+      transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: translateY(-0.2rem);
+      }
+    }
+    a {
+      @include flex(center, normal, column);
+      height: 100%; // Because otherwise the link won't be clickable at the bottom of the product.
+      img {
+        margin-top: 1rem;
+      }
+      p.country {
+        font-size: $p-subheading-font;
+        color: $font-color-opacity-80;
+        letter-spacing: 0.23rem;
+        margin: 2rem 0;
+      }
+      p.description {
+        color: $font-color-opacity-80;
+        margin-top: 0.5rem;
+        margin-bottom: 4.5rem;
+      }
     }
   }
 }
@@ -31,6 +76,21 @@ main.startsida {
     section.landing-page {
       padding: 0 5rem;
     }
+    section.most-sold-products {
+      .products {
+        column-gap: calc(15vw - 10rem);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 840px) {
+  main.startsida {
+    section.most-sold-products {
+      .products {
+        grid-template-columns: repeat(1, 25rem);
+      }
+    }
   }
 }
 
@@ -39,6 +99,25 @@ main.startsida {
     .banner-wrapper {
       width: 39rem;
       height: 9.4rem;
+    }
+    section.landing-page {
+      margin-bottom: 6.5rem;
+    }
+    section.most-sold-products {
+      h2 {
+        margin-bottom: 3rem;
+      }
+      .products {
+        grid-template-columns: repeat(1, 21.6rem);
+      }
+      .product {
+        height: 30.8rem;
+      }
+      a {
+        p.country {
+          font-size: $p-mobile-subheading-font;
+        }
+      }
     }
   }
 }
