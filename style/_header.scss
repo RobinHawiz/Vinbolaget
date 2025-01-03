@@ -20,10 +20,27 @@ header {
   .logo-search-container {
     @include flex(center, space-between, row);
   }
-  img {
+  .logo-desktop {
     width: 16.3rem;
     height: 4.4rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
+
+  // Is shown at max-width: 480px
+  .logo-mobile {
+    margin-top: 0.2rem;
+    width: 4rem;
+    height: 4.8rem;
+    display: none;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   form {
     position: relative;
     margin-left: 4rem;
@@ -49,6 +66,9 @@ header {
         color: $font-color-opacity-80;
       }
     }
+    &.inside-nav {
+      display: none;
+    }
   }
   nav {
     width: 35rem;
@@ -58,7 +78,7 @@ header {
   }
   .sveriges-godaste-hamburgare {
     @include flex(center, center, row);
-    width: 16.4rem;
+
     padding: 2rem 0;
     display: none;
     .menu {
@@ -129,9 +149,12 @@ header {
       transform: translateY(100%);
       display: none;
       ul {
-        @include flex(center, space-around, column);
-        height: 25rem;
+        @include flex(center, center, column);
+        height: 45rem;
         background-color: $secondary-color;
+        li {
+          margin: 3rem 0;
+        }
       }
 
       &.showNavbarAnimation {
@@ -146,6 +169,35 @@ header {
     }
     .sveriges-godaste-hamburgare {
       display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    form {
+      &.outside-nav {
+        display: none;
+      }
+      &.inside-nav {
+        display: block;
+        margin: 3rem 0;
+        input {
+          width: 25rem;
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    .logo-desktop {
+      display: none;
+    }
+    .logo-mobile {
+      display: block;
     }
   }
 }

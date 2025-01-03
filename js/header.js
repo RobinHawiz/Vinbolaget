@@ -30,10 +30,12 @@ function toggleHamburger() {
   nav.addEventListener(
     "animationend",
     () => {
-      // We hide the nav if it is open
+      // We toggle the nav for the above if-statement after the animation has ended.
+      // The above else-statement toggles the nav before the animation.
       if (isOpen) {
         toggleNav();
       }
+      // We wait until the nav has finished animating, before letting the user opening/closing the hamburger menu again.
       animationComplete = true;
     },
     { once: true }

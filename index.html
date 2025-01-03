@@ -27,10 +27,19 @@
     <header>
       <div class="header-content">
         <div class="logo-search-container">
-          <a href="index.html"
-            ><img src="img/logo/logo.svg" alt="Vinbolaget"
+          <!-- Switches between two different logos for dekstop and mobile.
+           Mobile at max-width: 480px -->
+          <a class="logo-desktop" href="index.html"
+            ><img src="img/logo/logo.svg" alt="Vinbolagets logga"
           /></a>
-          <form action="viner/viner.html" autocomplete="off">
+          <a class="logo-mobile" href="index.html"
+            ><img src="img/logo/logo-mobile.svg" alt="Vinbolagets logga"
+          /></a>
+          <form
+            class="outside-nav"
+            action="viner/viner.html"
+            autocomplete="off"
+          >
             <input type="search" name="search" placeholder="Sök vin..." />
           </form>
         </div>
@@ -44,10 +53,17 @@
         </button>
         <nav class="hideNavbarAnimation">
           <ul>
-            <li class="hidden"><a href="#">Sök</a></li>
             <li><a href="#">Om Vinbolaget</a></li>
             <li><a href="#">Viner</a></li>
             <li><a href="#">Varukorg</a></li>
+            <!-- Is shown only at max-width: 640px -->
+            <form
+              class="inside-nav"
+              action="viner/viner.html"
+              autocomplete="off"
+            >
+              <input type="search" name="search" placeholder="Sök vin..." />
+            </form>
           </ul>
         </nav>
       </div>
