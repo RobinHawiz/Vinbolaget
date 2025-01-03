@@ -68,7 +68,45 @@
         </nav>
       </div>
     </header>
-    <main class="startsida"></main>
+    <main class="startsida">
+      <div class="banner-wrapper">
+        <picture>
+          <source
+            type="image/webp"
+            media="(max-width: 480px)"
+            srcset="
+              img/hero/hero-mobile@1x.webp 1x,
+              img/hero/hero-mobile@1x.webp 2x,
+              img/hero/hero-mobile@1x.webp 3x
+            "
+          />
+          <source
+            type="image/jpg"
+            media="(max-width: 480px)"
+            srcset="
+              img/hero/hero-mobile@1x.jpg 1x,
+              img/hero/hero-mobile@1x.jpg 2x,
+              img/hero/hero-mobile@1x.jpg 3x
+            "
+          />
+          <source type="image/webp" srcset="img/hero/hero.webp" />
+          <img
+            src="img/hero/hero.jpg"
+            alt="Banner som visar en rad vinflaskor som står på en hylla"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+      <section class="landing-page">
+        <div class="headline">
+          <h1>Välkomment till Vinbolaget</h1>
+          <span class="divider"></span>
+          <p class="subheading">
+            Vi är Sveriges ledande nätbutik för kvalitetsviner
+          </p>
+        </div>
+      </section>
+    </main>
     <footer></footer>
     <script src="js/header.js"></script>
   </body>

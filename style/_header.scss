@@ -16,6 +16,7 @@ header {
     margin: auto;
     background-color: $primary-color;
     min-height: 10vh;
+    padding: 2rem 0;
   }
   .logo-search-container {
     @include flex(center, space-between, row);
