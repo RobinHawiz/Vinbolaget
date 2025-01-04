@@ -338,6 +338,22 @@ header .sveriges-godaste-hamburgare:hover .menu {
      object-fit: cover;
 }
 
+@media screen and (max-width: 1250px) {
+  .banner-wrapper {
+    height: calc(20rem + 8vw);
+  }
+}
+@media screen and (max-width: 480px) {
+  .banner-wrapper {
+    width: 39rem;
+    height: 9.4rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .banner-wrapper {
+    width: 100%;
+  }
+}
 footer {
   box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px -1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px -3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px -6px 6px -3px, rgba(14, 63, 126, 0.04) 0px -12px 12px -6px, rgba(14, 63, 126, 0.04) 0px -24px 24px -12px;
 }
@@ -406,7 +422,62 @@ main.om-vinbolaget section.landing-page .headline {
   flex-direction: column;
   text-align: center;
 }
+main.om-vinbolaget section.about-company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 10rem;
+}
+main.om-vinbolaget section.about-company .info-container {
+  max-width: 55.8rem;
+  margin-right: 2rem;
+  padding-left: 2rem;
+}
+main.om-vinbolaget section.about-company h2 {
+  margin-bottom: 2rem;
+}
+main.om-vinbolaget section.about-company .img-wrapper {
+  width: 64rem;
+  height: 42.7rem;
+}
+main.om-vinbolaget section.about-company img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
+@media screen and (max-width: 1250px) {
+  main.om-vinbolaget {
+    width: 100%;
+  }
+  main.om-vinbolaget section.landing-page {
+    padding: 0 5rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  main.om-vinbolaget section.about-company {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  main.om-vinbolaget section.about-company .info-container {
+    margin: 0 2rem 4rem 2rem;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  main.om-vinbolaget section.landing-page {
+    margin-bottom: 6.5rem;
+  }
+  main.om-vinbolaget section.about-company .info-container p {
+    line-height: 3rem;
+  }
+  main.om-vinbolaget section.about-company .img-wrapper {
+    width: 39rem;
+    height: 26rem;
+  }
+}
 main.startsida {
   width: 125rem;
   margin: auto;
@@ -524,9 +595,6 @@ main.startsida section.latest-news .news h3 {
   main.startsida {
     width: 100%;
   }
-  main.startsida .banner-wrapper {
-    height: calc(20rem + 8vw);
-  }
   main.startsida section.landing-page {
     padding: 0 5rem;
   }
@@ -559,10 +627,6 @@ main.startsida section.latest-news .news h3 {
   }
 }
 @media screen and (max-width: 480px) {
-  main.startsida .banner-wrapper {
-    width: 39rem;
-    height: 9.4rem;
-  }
   main.startsida section.landing-page {
     margin-bottom: 6.5rem;
   }
@@ -586,10 +650,5 @@ main.startsida section.latest-news .news h3 {
   }
   main.startsida section.latest-news .news article {
     height: 35rem;
-  }
-}
-@media screen and (max-width: 390px) {
-  main.startsida .banner-wrapper {
-    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

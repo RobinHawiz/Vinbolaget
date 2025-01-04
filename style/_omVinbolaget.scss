@@ -9,4 +9,68 @@ main.om-vinbolaget {
       text-align: center;
     }
   }
+  section.about-company {
+    @include flex(center, space-between, row);
+    margin-bottom: 10rem;
+    .info-container {
+      max-width: 55.8rem;
+      margin-right: 2rem;
+      padding-left: 2rem;
+    }
+    h2 {
+      margin-bottom: 2rem;
+    }
+    .img-wrapper {
+      width: 64rem;
+      height: 42.7rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  main.om-vinbolaget {
+    width: 100%;
+    section.landing-page {
+      padding: 0 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  main.om-vinbolaget {
+    section.about-company {
+      justify-content: center;
+      flex-wrap: wrap;
+      .info-container {
+        margin: 0 2rem 4rem 2rem;
+        padding: 0;
+      }
+    }
+  }
+}
+
+// Styling for mobile
+
+@media screen and (max-width: 480px) {
+  main.om-vinbolaget {
+    section.landing-page {
+      margin-bottom: 6.5rem;
+    }
+    section.about-company {
+      .info-container {
+        p {
+          line-height: 3rem;
+        }
+      }
+      .img-wrapper {
+        width: 39rem;
+        height: 26rem;
+      }
+    }
+  }
 }

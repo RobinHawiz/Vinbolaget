@@ -9,3 +9,23 @@
     object-fit: cover;
   }
 }
+@media screen and (max-width: 1250px) {
+  .banner-wrapper {
+    height: calc(20rem + 8vw);
+  }
+}
+
+// Styling for mobile
+
+@media screen and (max-width: 480px) {
+  .banner-wrapper {
+    width: 39rem;
+    height: 9.4rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .banner-wrapper {
+    width: 100%;
+  }
+}

@@ -107,9 +107,6 @@ main.startsida {
 @media screen and (max-width: 1250px) {
   main.startsida {
     width: 100%;
-    .banner-wrapper {
-      height: calc(20rem + 8vw);
-    }
     section.landing-page {
       padding: 0 5rem;
     }
@@ -161,10 +158,6 @@ main.startsida {
 
 @media screen and (max-width: 480px) {
   main.startsida {
-    .banner-wrapper {
-      width: 39rem;
-      height: 9.4rem;
-    }
     section.landing-page {
       margin-bottom: 6.5rem;
     }
@@ -198,14 +191,6 @@ main.startsida {
           height: 35rem;
         }
       }
-    }
-  }
-}
-
-@media screen and (max-width: 390px) {
-  main.startsida {
-    .banner-wrapper {
-      width: 100%;
     }
   }
 }
