@@ -155,18 +155,18 @@ main.startsida section.most-sold-products .products {
   grid-template-columns: repeat(3, 25rem);
   justify-content: center;
 }
-main.startsida section.most-sold-products .product {
+main.startsida section.most-sold-products article {
   height: 39rem;
   border-radius: 1.5rem;
   background-color: #ffffff;
   transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-main.startsida section.most-sold-products .product:hover {
+main.startsida section.most-sold-products article:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: translateY(-0.2rem);
 }
-main.startsida section.most-sold-products .product:hover a p.title {
+main.startsida section.most-sold-products article:hover h3 {
   text-decoration: underline;
 }
 main.startsida section.most-sold-products a {
@@ -287,7 +287,7 @@ main.startsida section.latest-news .news h3 {
   main.startsida section.most-sold-products .products {
     grid-template-columns: repeat(1, 21.6rem);
   }
-  main.startsida section.most-sold-products .product {
+  main.startsida section.most-sold-products article {
     height: 30.8rem;
   }
   main.startsida section.most-sold-products a p.country {

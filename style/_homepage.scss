@@ -35,7 +35,7 @@ main.startsida {
         $justify: center
       );
     }
-    .product {
+    article {
       height: 39rem;
       border-radius: 1.5rem;
       background-color: $secondary-color;
@@ -44,7 +44,7 @@ main.startsida {
       &:hover {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         transform: translateY(-0.2rem);
-        a p.title {
+        h3 {
           text-decoration: underline;
         }
       }
@@ -186,7 +186,7 @@ main.startsida {
       .products {
         grid-template-columns: repeat(1, 21.6rem);
       }
-      .product {
+      article {
         height: 30.8rem;
       }
       a {
