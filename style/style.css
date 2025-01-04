@@ -101,7 +101,7 @@ img {
     font-size: 1.8rem;
   }
   h2 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
   p.h2-subheading {
     font-size: 1.8rem;
@@ -521,5 +521,55 @@ header .sveriges-godaste-hamburgare:hover .menu {
   to {
     opacity: 0;
     transform: translateY(0);
+  }
+}
+footer {
+  box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px -1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px -3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px -6px 6px -3px, rgba(14, 63, 126, 0.04) 0px -12px 12px -6px, rgba(14, 63, 126, 0.04) 0px -24px 24px -12px;
+}
+footer .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 125rem;
+  min-height: 10vh;
+  margin: auto;
+  padding: 2rem 0;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+footer li:first-child {
+  margin-right: 2rem;
+}
+footer svg:hover {
+  fill: #616161;
+}
+footer a:hover {
+  color: #616161;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1250px) {
+  footer .footer-content {
+    width: 100%;
+    margin: 0;
+    padding: 2rem 5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer .footer-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer ul {
+    flex-basis: 100%;
+  }
+  footer p {
+    justify-self: center;
+    margin-bottom: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
