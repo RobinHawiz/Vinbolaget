@@ -110,204 +110,6 @@ img {
     font-size: 1.6rem;
   }
 }
-main.startsida {
-  width: 125rem;
-  margin: auto;
-}
-main.startsida .banner-wrapper {
-  width: 100%;
-  height: 30.1rem;
-  margin: auto;
-  margin-bottom: 4rem;
-}
-main.startsida .banner-wrapper img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main.startsida section.landing-page {
-  display: flex;
-  align-items: center;
-  justify-content: normal;
-  flex-direction: column;
-  margin-bottom: 10rem;
-}
-main.startsida section.landing-page .headline {
-  display: flex;
-  align-items: center;
-  justify-content: normal;
-  flex-direction: column;
-  text-align: center;
-}
-main.startsida section.most-sold-products {
-  margin-bottom: 10rem;
-}
-main.startsida section.most-sold-products h2 {
-  margin-bottom: 5rem;
-  text-align: center;
-}
-main.startsida section.most-sold-products .products {
-  display: grid;
-  row-gap: 3rem;
-  -moz-column-gap: 9rem;
-       column-gap: 9rem;
-  grid-template-columns: repeat(3, 25rem);
-  justify-content: center;
-}
-main.startsida section.most-sold-products article {
-  height: 39rem;
-  border-radius: 1.5rem;
-  background-color: #ffffff;
-  transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-main.startsida section.most-sold-products article:hover {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  transform: translateY(-0.2rem);
-}
-main.startsida section.most-sold-products article:hover h3 {
-  text-decoration: underline;
-}
-main.startsida section.most-sold-products a {
-  display: flex;
-  align-items: center;
-  justify-content: normal;
-  flex-direction: column;
-  height: 100%;
-}
-main.startsida section.most-sold-products a img {
-  margin-top: 1rem;
-}
-main.startsida section.most-sold-products a p.country {
-  font-size: 1.6rem;
-  color: rgba(33, 33, 33, 0.8);
-  letter-spacing: 0.23rem;
-  margin: 2rem 0;
-}
-main.startsida section.most-sold-products a p.description {
-  color: rgba(33, 33, 33, 0.8);
-  margin-top: 0.5rem;
-  margin-bottom: 4.5rem;
-}
-main.startsida section.latest-news {
-  margin-bottom: 10rem;
-}
-main.startsida section.latest-news h2 {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-main.startsida section.latest-news p.h2-subheading {
-  margin-bottom: 5rem;
-  text-align: center;
-}
-main.startsida section.latest-news .news {
-  display: grid;
-  row-gap: 3rem;
-  -moz-column-gap: 9rem;
-       column-gap: 9rem;
-  grid-template-columns: repeat(3, 28rem);
-  justify-content: center;
-}
-main.startsida section.latest-news .news article {
-  height: 45rem;
-  background-color: #ffffff;
-  border-radius: 1.5rem;
-  transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-main.startsida section.latest-news .news article:hover {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  transform: translateY(-0.2rem);
-}
-main.startsida section.latest-news .news article:hover h3 {
-  text-decoration: underline;
-}
-main.startsida section.latest-news .news .content {
-  padding: 2rem 2rem;
-}
-main.startsida section.latest-news .news p.date {
-  color: rgba(33, 33, 33, 0.8);
-  font-size: 1.6rem;
-}
-main.startsida section.latest-news .news h3 {
-  margin-top: 1rem;
-  font-weight: 400;
-}
-
-@media screen and (max-width: 1250px) {
-  main.startsida {
-    width: 100%;
-  }
-  main.startsida .banner-wrapper {
-    height: calc(20rem + 8vw);
-  }
-  main.startsida section.landing-page {
-    padding: 0 5rem;
-  }
-  main.startsida section.most-sold-products .products,
-  main.startsida section.latest-news .news {
-    -moz-column-gap: calc(15vw - 10rem);
-         column-gap: calc(15vw - 10rem);
-  }
-}
-@media screen and (max-width: 950px) {
-  main.startsida section.latest-news .news {
-    grid-template-columns: repeat(2, 28rem);
-    -moz-column-gap: calc(10vw - 5rem);
-         column-gap: calc(10vw - 5rem);
-  }
-}
-@media screen and (max-width: 840px) {
-  main.startsida section.most-sold-products .products {
-    grid-template-columns: repeat(2, 25rem);
-    -moz-column-gap: calc(10vw - 5rem);
-         column-gap: calc(10vw - 5rem);
-  }
-}
-@media screen and (max-width: 600px) {
-  main.startsida section.latest-news .news {
-    grid-template-columns: repeat(1, 28rem);
-  }
-  main.startsida section.most-sold-products .products {
-    grid-template-columns: repeat(1, 25rem);
-  }
-}
-@media screen and (max-width: 480px) {
-  main.startsida .banner-wrapper {
-    width: 39rem;
-    height: 9.4rem;
-  }
-  main.startsida section.landing-page {
-    margin-bottom: 6.5rem;
-  }
-  main.startsida section.most-sold-products h2 {
-    margin-bottom: 3rem;
-  }
-  main.startsida section.most-sold-products .products {
-    grid-template-columns: repeat(1, 21.6rem);
-  }
-  main.startsida section.most-sold-products article {
-    height: 30.8rem;
-  }
-  main.startsida section.most-sold-products a p.country {
-    font-size: 1.4rem;
-  }
-  main.startsida section.latest-news .news p.date {
-    font-size: 1.4rem;
-  }
-  main.startsida section.latest-news .news {
-    grid-template-columns: repeat(1, 21.8rem);
-  }
-  main.startsida section.latest-news .news article {
-    height: 35rem;
-  }
-}
-@media screen and (max-width: 390px) {
-  main.startsida .banner-wrapper {
-    width: 100%;
-  }
-}
 header {
   display: flex;
   align-items: normal;
@@ -523,6 +325,19 @@ header .sveriges-godaste-hamburgare:hover .menu {
     transform: translateY(0);
   }
 }
+.banner-wrapper {
+  width: 100%;
+  height: 30.1rem;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+.banner-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 footer {
   box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px -1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px -3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px -6px 6px -3px, rgba(14, 63, 126, 0.04) 0px -12px 12px -6px, rgba(14, 63, 126, 0.04) 0px -24px 24px -12px;
 }
@@ -571,5 +386,210 @@ footer a:hover {
   footer p {
     justify-self: center;
     margin-bottom: 1rem;
+  }
+}
+main.om-vinbolaget {
+  width: 125rem;
+  margin: auto;
+}
+main.om-vinbolaget section.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+main.om-vinbolaget section.landing-page .headline {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  text-align: center;
+}
+
+main.startsida {
+  width: 125rem;
+  margin: auto;
+}
+main.startsida section.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+main.startsida section.landing-page .headline {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  text-align: center;
+}
+main.startsida section.most-sold-products {
+  margin-bottom: 10rem;
+}
+main.startsida section.most-sold-products h2 {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+main.startsida section.most-sold-products .products {
+  display: grid;
+  row-gap: 3rem;
+  -moz-column-gap: 9rem;
+       column-gap: 9rem;
+  grid-template-columns: repeat(3, 25rem);
+  justify-content: center;
+}
+main.startsida section.most-sold-products article {
+  height: 39rem;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+main.startsida section.most-sold-products article:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translateY(-0.2rem);
+}
+main.startsida section.most-sold-products article:hover h3 {
+  text-decoration: underline;
+}
+main.startsida section.most-sold-products a {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  height: 100%;
+}
+main.startsida section.most-sold-products a img {
+  margin-top: 1rem;
+}
+main.startsida section.most-sold-products a p.country {
+  font-size: 1.6rem;
+  color: rgba(33, 33, 33, 0.8);
+  letter-spacing: 0.23rem;
+  margin: 2rem 0;
+}
+main.startsida section.most-sold-products a p.description {
+  color: rgba(33, 33, 33, 0.8);
+  margin-top: 0.5rem;
+  margin-bottom: 4.5rem;
+}
+main.startsida section.latest-news {
+  margin-bottom: 10rem;
+}
+main.startsida section.latest-news h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+main.startsida section.latest-news p.h2-subheading {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+main.startsida section.latest-news .news {
+  display: grid;
+  row-gap: 3rem;
+  -moz-column-gap: 9rem;
+       column-gap: 9rem;
+  grid-template-columns: repeat(3, 28rem);
+  justify-content: center;
+}
+main.startsida section.latest-news .news article {
+  height: 45rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+main.startsida section.latest-news .news article:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translateY(-0.2rem);
+}
+main.startsida section.latest-news .news article:hover h3 {
+  text-decoration: underline;
+}
+main.startsida section.latest-news .news .content {
+  padding: 2rem 2rem;
+}
+main.startsida section.latest-news .news p.date {
+  color: rgba(33, 33, 33, 0.8);
+  font-size: 1.6rem;
+}
+main.startsida section.latest-news .news h3 {
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1250px) {
+  main.startsida {
+    width: 100%;
+  }
+  main.startsida .banner-wrapper {
+    height: calc(20rem + 8vw);
+  }
+  main.startsida section.landing-page {
+    padding: 0 5rem;
+  }
+  main.startsida section.most-sold-products .products,
+  main.startsida section.latest-news .news {
+    -moz-column-gap: calc(15vw - 10rem);
+         column-gap: calc(15vw - 10rem);
+  }
+}
+@media screen and (max-width: 950px) {
+  main.startsida section.latest-news .news {
+    grid-template-columns: repeat(2, 28rem);
+    -moz-column-gap: calc(10vw - 5rem);
+         column-gap: calc(10vw - 5rem);
+  }
+}
+@media screen and (max-width: 840px) {
+  main.startsida section.most-sold-products .products {
+    grid-template-columns: repeat(2, 25rem);
+    -moz-column-gap: calc(10vw - 5rem);
+         column-gap: calc(10vw - 5rem);
+  }
+}
+@media screen and (max-width: 600px) {
+  main.startsida section.latest-news .news {
+    grid-template-columns: repeat(1, 28rem);
+  }
+  main.startsida section.most-sold-products .products {
+    grid-template-columns: repeat(1, 25rem);
+  }
+}
+@media screen and (max-width: 480px) {
+  main.startsida .banner-wrapper {
+    width: 39rem;
+    height: 9.4rem;
+  }
+  main.startsida section.landing-page {
+    margin-bottom: 6.5rem;
+  }
+  main.startsida section.most-sold-products h2 {
+    margin-bottom: 3rem;
+  }
+  main.startsida section.most-sold-products .products {
+    grid-template-columns: repeat(1, 21.6rem);
+  }
+  main.startsida section.most-sold-products article {
+    height: 30.8rem;
+  }
+  main.startsida section.most-sold-products a p.country {
+    font-size: 1.4rem;
+  }
+  main.startsida section.latest-news .news p.date {
+    font-size: 1.4rem;
+  }
+  main.startsida section.latest-news .news {
+    grid-template-columns: repeat(1, 21.8rem);
+  }
+  main.startsida section.latest-news .news article {
+    height: 35rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  main.startsida .banner-wrapper {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

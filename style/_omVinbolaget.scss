@@ -1,0 +1,12 @@
+main.om-vinbolaget {
+  width: 125rem;
+  margin: auto;
+  section.landing-page {
+    @include flex(center, normal, column);
+    margin-bottom: 10rem;
+    .headline {
+      @include flex(center, normal, column);
+      text-align: center;
+    }
+  }
+}
