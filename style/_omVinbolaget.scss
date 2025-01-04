@@ -20,14 +20,41 @@ main.om-vinbolaget {
     h2 {
       margin-bottom: 2rem;
     }
+    p {
+      line-height: 3rem;
+    }
     .img-wrapper {
-      width: 64rem;
+      max-width: 64rem;
       height: 42.7rem;
     }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  section.about-developer {
+    @include flex(center, space-between, row);
+    .info-container {
+      max-width: 55.8rem;
+      margin-right: 2rem;
+      padding-left: 2rem;
+    }
+    h2 {
+      margin-bottom: 2rem;
+    }
+    p {
+      line-height: 3rem;
+    }
+    .img-wrapper {
+      max-width: 42.7rem;
+      height: 64.4rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: bottom;
     }
   }
 }
@@ -38,17 +65,37 @@ main.om-vinbolaget {
     section.landing-page {
       padding: 0 5rem;
     }
+    section.about-developer {
+      .img-wrapper {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 950px) {
   main.om-vinbolaget {
-    section.about-company {
+    section.about-company,
+    section.about-developer {
       justify-content: center;
       flex-wrap: wrap;
       .info-container {
         margin: 0 2rem 4rem 2rem;
         padding: 0;
+      }
+    }
+    section.about-company {
+      .img-wrapper {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    section.about-developer {
+      flex-wrap: wrap-reverse;
+      .img-wrapper {
+        // Want to shrink the image sooner when user makes the width of the browser window smaller.
+        margin: 0 10rem;
       }
     }
   }
@@ -62,14 +109,17 @@ main.om-vinbolaget {
       margin-bottom: 6.5rem;
     }
     section.about-company {
-      .info-container {
-        p {
-          line-height: 3rem;
-        }
-      }
+      margin-bottom: 4rem;
       .img-wrapper {
         width: 39rem;
         height: 26rem;
+      }
+    }
+    section.about-developer {
+      .img-wrapper {
+        width: 19rem;
+        height: 28.7rem;
+        margin: 0;
       }
     }
   }
