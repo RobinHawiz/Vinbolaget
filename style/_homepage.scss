@@ -1,15 +1,4 @@
 main.startsida {
-  width: 125rem;
-  margin: auto;
-  section.landing-page {
-    @include flex(center, normal, column);
-    margin-bottom: 10rem;
-    .headline {
-      @include flex(center, normal, column);
-      text-align: center;
-    }
-  }
-
   section.most-sold-products {
     margin-bottom: 10rem;
     h2 {
@@ -106,10 +95,6 @@ main.startsida {
 
 @media screen and (max-width: 1250px) {
   main.startsida {
-    width: 100%;
-    section.landing-page {
-      padding: 0 5rem;
-    }
     section.most-sold-products .products,
     section.latest-news .news {
       column-gap: calc(15vw - 10rem);
@@ -158,9 +143,6 @@ main.startsida {
 
 @media screen and (max-width: 480px) {
   main.startsida {
-    section.landing-page {
-      margin-bottom: 6.5rem;
-    }
     section.most-sold-products {
       h2 {
         margin-bottom: 3rem;

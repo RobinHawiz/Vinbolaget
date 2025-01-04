@@ -325,6 +325,25 @@ header .sveriges-godaste-hamburgare:hover .menu {
     transform: translateY(0);
   }
 }
+.headline {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+@media screen and (max-width: 1250px) {
+  .headline {
+    padding: 0 5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .headline {
+    margin-bottom: 6.5rem;
+  }
+}
 .banner-wrapper {
   width: 100%;
   height: 30.1rem;
@@ -351,6 +370,16 @@ header .sveriges-godaste-hamburgare:hover .menu {
 }
 @media screen and (max-width: 390px) {
   .banner-wrapper {
+    width: 100%;
+  }
+}
+main {
+  width: 125rem;
+  margin: auto;
+}
+
+@media screen and (max-width: 1250px) {
+  main {
     width: 100%;
   }
 }
@@ -403,149 +432,6 @@ footer a:hover {
     justify-self: center;
     margin-bottom: 1rem;
   }
-}
-main.om-vinbolaget {
-  width: 125rem;
-  margin: auto;
-}
-main.om-vinbolaget section.landing-page {
-  display: flex;
-  align-items: center;
-  justify-content: normal;
-  flex-direction: column;
-  margin-bottom: 10rem;
-}
-main.om-vinbolaget section.landing-page .headline {
-  display: flex;
-  align-items: center;
-  justify-content: normal;
-  flex-direction: column;
-  text-align: center;
-}
-main.om-vinbolaget section.about-company {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  margin-bottom: 10rem;
-}
-main.om-vinbolaget section.about-company .info-container {
-  max-width: 55.8rem;
-  margin-right: 2rem;
-  padding-left: 2rem;
-}
-main.om-vinbolaget section.about-company h2 {
-  margin-bottom: 2rem;
-}
-main.om-vinbolaget section.about-company p {
-  line-height: 3rem;
-}
-main.om-vinbolaget section.about-company .img-wrapper {
-  max-width: 64rem;
-  height: 42.7rem;
-}
-main.om-vinbolaget section.about-company img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main.om-vinbolaget section.about-developer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-main.om-vinbolaget section.about-developer .info-container {
-  max-width: 55.8rem;
-  margin-right: 2rem;
-  padding-left: 2rem;
-}
-main.om-vinbolaget section.about-developer h2 {
-  margin-bottom: 2rem;
-}
-main.om-vinbolaget section.about-developer p {
-  line-height: 3rem;
-}
-main.om-vinbolaget section.about-developer .img-wrapper {
-  max-width: 42.7rem;
-  height: 64.4rem;
-}
-main.om-vinbolaget section.about-developer img {
-  width: 100%;
-  height: 100%;
-  -o-object-position: bottom;
-     object-position: bottom;
-}
-
-@media screen and (max-width: 1250px) {
-  main.om-vinbolaget {
-    width: 100%;
-  }
-  main.om-vinbolaget section.landing-page {
-    padding: 0 5rem;
-  }
-  main.om-vinbolaget section.about-developer .img-wrapper {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media screen and (max-width: 950px) {
-  main.om-vinbolaget section.about-company,
-  main.om-vinbolaget section.about-developer {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  main.om-vinbolaget section.about-company .info-container,
-  main.om-vinbolaget section.about-developer .info-container {
-    margin: 0 2rem 4rem 2rem;
-    padding: 0;
-  }
-  main.om-vinbolaget section.about-company .img-wrapper {
-    width: 100%;
-    height: 100%;
-  }
-  main.om-vinbolaget section.about-developer {
-    flex-wrap: wrap-reverse;
-  }
-  main.om-vinbolaget section.about-developer .img-wrapper {
-    margin: 0 10rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  main.om-vinbolaget section.landing-page {
-    margin-bottom: 6.5rem;
-  }
-  main.om-vinbolaget section.about-company {
-    margin-bottom: 4rem;
-  }
-  main.om-vinbolaget section.about-company .img-wrapper {
-    width: 39rem;
-    height: 26rem;
-  }
-  main.om-vinbolaget section.about-developer .img-wrapper {
-    width: 19rem;
-    height: 28.7rem;
-    margin: 0;
-  }
-}
-main.startsida {
-  width: 125rem;
-  margin: auto;
-}
-main.startsida section.landing-page {
-  display: flex;
-  align-items: center;
-  justify-content: normal;
-  flex-direction: column;
-  margin-bottom: 10rem;
-}
-main.startsida section.landing-page .headline {
-  display: flex;
-  align-items: center;
-  justify-content: normal;
-  flex-direction: column;
-  text-align: center;
 }
 main.startsida section.most-sold-products {
   margin-bottom: 10rem;
@@ -643,12 +529,6 @@ main.startsida section.latest-news .news h3 {
 }
 
 @media screen and (max-width: 1250px) {
-  main.startsida {
-    width: 100%;
-  }
-  main.startsida section.landing-page {
-    padding: 0 5rem;
-  }
   main.startsida section.most-sold-products .products,
   main.startsida section.latest-news .news {
     -moz-column-gap: calc(15vw - 10rem);
@@ -678,9 +558,6 @@ main.startsida section.latest-news .news h3 {
   }
 }
 @media screen and (max-width: 480px) {
-  main.startsida section.landing-page {
-    margin-bottom: 6.5rem;
-  }
   main.startsida section.most-sold-products h2 {
     margin-bottom: 3rem;
   }
@@ -701,5 +578,103 @@ main.startsida section.latest-news .news h3 {
   }
   main.startsida section.latest-news .news article {
     height: 35rem;
+  }
+}
+main.om-vinbolaget section.about-company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 10rem;
+}
+main.om-vinbolaget section.about-company .info-container {
+  max-width: 55.8rem;
+  margin-right: 2rem;
+  padding-left: 2rem;
+}
+main.om-vinbolaget section.about-company h2 {
+  margin-bottom: 2rem;
+}
+main.om-vinbolaget section.about-company p {
+  line-height: 3rem;
+}
+main.om-vinbolaget section.about-company .img-wrapper {
+  max-width: 64rem;
+  height: 42.7rem;
+}
+main.om-vinbolaget section.about-company img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.om-vinbolaget section.about-developer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main.om-vinbolaget section.about-developer .info-container {
+  max-width: 55.8rem;
+  margin-right: 2rem;
+  padding-left: 2rem;
+}
+main.om-vinbolaget section.about-developer h2 {
+  margin-bottom: 2rem;
+}
+main.om-vinbolaget section.about-developer p {
+  line-height: 3rem;
+}
+main.om-vinbolaget section.about-developer .img-wrapper {
+  max-width: 42.7rem;
+  height: 64.4rem;
+}
+main.om-vinbolaget section.about-developer img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+@media screen and (max-width: 1250px) {
+  main.om-vinbolaget section.about-developer .img-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 950px) {
+  main.om-vinbolaget section.about-company,
+  main.om-vinbolaget section.about-developer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  main.om-vinbolaget section.about-company .info-container,
+  main.om-vinbolaget section.about-developer .info-container {
+    margin: 0 2rem 4rem 2rem;
+    padding: 0;
+  }
+  main.om-vinbolaget section.about-company .img-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  main.om-vinbolaget section.about-developer {
+    flex-wrap: wrap-reverse;
+  }
+  main.om-vinbolaget section.about-developer .img-wrapper {
+    margin: 0 10rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  main.om-vinbolaget section.about-company {
+    margin-bottom: 4rem;
+  }
+  main.om-vinbolaget section.about-company .img-wrapper {
+    width: 39rem;
+    height: 26rem;
+  }
+  main.om-vinbolaget section.about-developer .img-wrapper {
+    width: 19rem;
+    height: 28.7rem;
+    margin: 0;
   }
 }/*# sourceMappingURL=style.css.map */

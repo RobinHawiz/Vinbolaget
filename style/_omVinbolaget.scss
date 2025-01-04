@@ -1,14 +1,4 @@
 main.om-vinbolaget {
-  width: 125rem;
-  margin: auto;
-  section.landing-page {
-    @include flex(center, normal, column);
-    margin-bottom: 10rem;
-    .headline {
-      @include flex(center, normal, column);
-      text-align: center;
-    }
-  }
   section.about-company {
     @include flex(center, space-between, row);
     margin-bottom: 10rem;
@@ -61,10 +51,6 @@ main.om-vinbolaget {
 
 @media screen and (max-width: 1250px) {
   main.om-vinbolaget {
-    width: 100%;
-    section.landing-page {
-      padding: 0 5rem;
-    }
     section.about-developer {
       .img-wrapper {
         width: 100%;
@@ -105,9 +91,6 @@ main.om-vinbolaget {
 
 @media screen and (max-width: 480px) {
   main.om-vinbolaget {
-    section.landing-page {
-      margin-bottom: 6.5rem;
-    }
     section.about-company {
       margin-bottom: 4rem;
       .img-wrapper {

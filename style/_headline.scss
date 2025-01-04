@@ -1,0 +1,19 @@
+.headline {
+  @include flex(center, normal, column);
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+@media screen and (max-width: 1250px) {
+  .headline {
+    padding: 0 5rem;
+  }
+}
+
+// Styling for mobile
+
+@media screen and (max-width: 480px) {
+  .headline {
+    margin-bottom: 6.5rem;
+  }
+}
