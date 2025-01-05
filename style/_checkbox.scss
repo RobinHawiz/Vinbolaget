@@ -1,0 +1,37 @@
+label:has(input[type="checkbox"]) {
+  @include flex(center, center, row);
+  font-size: $p-font;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1rem;
+  background-color: $secondary-color;
+  border-radius: 0.5rem;
+  outline: 0.1rem solid $font-color;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+  background-color: $font-color;
+}
+
+input[type="checkbox"]:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: calc(50% - 0.7rem);
+  margin-left: calc(50% - 0.7rem);
+  content: "";
+  background-image: url("../icon/iconmonstr-check-mark.svg");
+  width: 1.4rem;
+  height: 1.4rem;
+}

@@ -1,0 +1,47 @@
+main.viner {
+  .products {
+    .filters {
+      width: 23.6rem;
+      margin-bottom: 5rem;
+    }
+    p.search-results {
+      margin: 2rem 0;
+    }
+    .filter-wine-types {
+      border-bottom: 0.1rem solid $divider-color;
+      border-top: 0.1rem solid $divider-color;
+    }
+    h4 {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    ul {
+      @include flex(flex-start, center, column);
+    }
+    li {
+      margin-bottom: 2rem;
+    }
+    .price-input-boxes {
+      @include flex(center, space-between, row);
+      font-size: $p-font;
+      .input-container {
+        @include flex(center, space-between, row);
+        margin-top: 1rem;
+      }
+      input {
+        width: 8rem;
+        height: 4rem;
+        padding-left: 1rem;
+        display: inline;
+        padding-top: 0.15rem;
+        border: none;
+        border-radius: 0.5rem;
+        outline: 0.1rem solid $font-color-opacity-80;
+      }
+      p.valuta {
+        font-size: $input-text-font;
+        margin-left: 1rem;
+      }
+    }
+  }
+}

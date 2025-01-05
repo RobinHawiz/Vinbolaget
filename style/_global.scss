@@ -17,6 +17,11 @@ $links-color-hover: #616161;
 
 $button-add-to-cart-color: #095741;
 
+$divider-color: rgba(
+  $color: #252525,
+  $alpha: 0.5,
+);
+
 // Variables - Desktop Font sizes
 
 $h1-font: 4.8rem;
@@ -27,12 +32,17 @@ $h2-subheading-font: 2rem;
 
 $h3-font: 1.8rem;
 
+$h4-font: 2.2rem;
+
 $nav-font: 2rem;
 
 $footer-font: 2rem;
 
 $p-font: 1.8rem;
 $p-subheading-font: 1.6rem;
+
+$input-search-font: 2rem;
+$input-text-font: 1.6rem;
 
 $button-font: 2rem;
 
@@ -115,6 +125,10 @@ h3 {
   font-size: $h3-font;
 }
 
+h4 {
+  font-size: $h4-font;
+}
+
 p {
   font-size: $p-font;
 }
@@ -130,8 +144,16 @@ a.link {
   }
 }
 
+input[type="search"] {
+  font-size: $input-search-font;
+}
+
+input[type="text"] {
+  font-size: $input-text-font;
+}
+
 input {
-  font-size: $nav-font;
+  font-family: "Libre Baskerville", Helvetica, sans-serif;
 }
 
 ::placeholder {
@@ -161,7 +183,7 @@ span.divider {
   margin: 2rem 0;
 }
 
-// The <picture> element makes the images display: inline. So I revert them back to display: block. Otherwise we get mysterious white space under each image.
+// The <picture> element makes the images display: inline. So I revert them back to display: block, otherwise we get mysterious white space under each image.
 img {
   display: block;
 }
