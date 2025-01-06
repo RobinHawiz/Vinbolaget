@@ -53,6 +53,10 @@ a.link:hover {
   color: #616161;
 }
 
+label {
+  font-size: 1.8rem;
+}
+
 input[type=search] {
   font-size: 2rem;
 }
@@ -119,6 +123,12 @@ img {
     font-size: 1.8rem;
   }
   h3 {
+    font-size: 1.6rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  label {
     font-size: 1.6rem;
   }
 }
@@ -400,7 +410,6 @@ label:has(input[type=checkbox]) {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  font-size: 1.8rem;
   cursor: pointer;
 }
 
@@ -731,45 +740,55 @@ main.om-vinbolaget section.about-developer img {
     margin: 0;
   }
 }
-main.viner .products .filters {
+main.viner .product-listing {
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 10rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+main.viner .product-listing .filters {
   width: 23.6rem;
   margin-bottom: 5rem;
+  margin-right: 5rem;
 }
-main.viner .products p.search-results {
+main.viner .product-listing p.search-results {
   margin: 2rem 0;
 }
-main.viner .products .filter-wine-types {
+main.viner .product-listing .filter-wine-types {
   border-bottom: 0.1rem solid rgba(37, 37, 37, 0.5);
   border-top: 0.1rem solid rgba(37, 37, 37, 0.5);
 }
-main.viner .products h4 {
+main.viner .product-listing h4.filter-header {
   margin-top: 2rem;
   margin-bottom: 3rem;
 }
-main.viner .products ul {
+main.viner .product-listing ul {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
 }
-main.viner .products li {
+main.viner .product-listing li {
   margin-bottom: 2rem;
 }
-main.viner .products .price-input-boxes {
+main.viner .product-listing .price-input-boxes {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   font-size: 1.8rem;
 }
-main.viner .products .price-input-boxes .input-container {
+main.viner .product-listing .price-input-boxes .input-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   margin-top: 1rem;
 }
-main.viner .products .price-input-boxes input {
+main.viner .product-listing .price-input-boxes input {
   width: 8rem;
   height: 4rem;
   padding-left: 1rem;
@@ -779,7 +798,163 @@ main.viner .products .price-input-boxes input {
   border-radius: 0.5rem;
   outline: 0.1rem solid rgba(33, 33, 33, 0.8);
 }
-main.viner .products .price-input-boxes p.valuta {
+main.viner .product-listing .price-input-boxes p.valuta {
   font-size: 1.6rem;
   margin-left: 1rem;
+}
+main.viner .product-listing .products {
+  display: grid;
+  row-gap: 3rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  width: 100%;
+}
+main.viner .product-listing a:hover h4,
+main.viner .product-listing a:hover p.description,
+main.viner .product-listing a:hover + .product-info-container h4,
+main.viner .product-listing a:hover + .product-info-container p.description {
+  text-decoration: underline;
+}
+main.viner .product-listing article {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: row;
+  min-height: 35rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  transition: all 0.25s ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+main.viner .product-listing article:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translateY(-0.2rem);
+}
+main.viner .product-listing img.product-img {
+  padding-right: 2rem;
+}
+main.viner .product-listing .product-info-container {
+  width: 100%;
+}
+main.viner .product-listing .country-label-container {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: row;
+  position: relative;
+}
+main.viner .product-listing img.flag {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+main.viner .product-listing p.country {
+  color: rgba(33, 33, 33, 0.8);
+  padding-left: 0.8rem;
+}
+main.viner .product-listing p.type {
+  text-decoration: underline;
+  letter-spacing: 0.23rem;
+  padding-bottom: 1.2rem;
+}
+main.viner .product-listing h4.title {
+  padding-bottom: 0.3rem;
+}
+main.viner .product-listing p.description {
+  font-size: 2.2rem;
+  padding-bottom: 1.2rem;
+}
+main.viner .product-listing .country-label-container {
+  padding-bottom: 1.2rem;
+}
+main.viner .product-listing p.price {
+  font-size: 2.2rem;
+  padding: 1.2rem 0;
+  font-weight: 700;
+  border-top: 0.1rem solid rgba(37, 37, 37, 0.5);
+  border-bottom: 0.1rem solid rgba(37, 37, 37, 0.5);
+}
+main.viner .product-listing p.volume {
+  color: rgba(33, 33, 33, 0.8);
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 0.1rem solid rgba(37, 37, 37, 0.5);
+}
+main.viner .product-listing .in-stock-add-to-cart-button {
+  position: relative;
+  width: 100%;
+  margin-top: 1.3rem;
+  height: 4rem;
+}
+main.viner .product-listing .in-stock-container {
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 1.2rem);
+}
+main.viner .product-listing img.in-stock-img {
+  display: inline-block;
+  padding-right: 0.8rem;
+}
+main.viner .product-listing p.in-stock {
+  position: absolute;
+  font-size: 1.6rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+main.viner .product-listing button {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  float: right;
+  background-color: #095741;
+}
+main.viner .product-listing button:hover {
+  background-color: #0b7356;
+}
+main.viner .product-listing img.add-to-cart-img {
+  position: absolute;
+  top: calc(50% - 1.2rem);
+  left: calc(50% - 1.2rem);
+}
+
+@media screen and (max-width: 1000px) {
+  main.viner .product-listing .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 680px) {
+  main.viner .headline {
+    margin-bottom: 3rem;
+  }
+  main.viner .product-listing {
+    flex-direction: column;
+    align-items: center;
+  }
+  main.viner .product-listing .filters {
+    margin-right: 0;
+  }
+  main.viner .product-listing p.search-results,
+  main.viner .product-listing h4.filter-header {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  main.viner .product-listing .products {
+    min-width: 28.7rem;
+  }
+  main.viner .product-listing p.description {
+    font-size: 1.8rem;
+  }
+  main.viner .product-listing p.country {
+    padding-top: 0.2rem;
+  }
+  main.viner .product-listing p.price {
+    font-size: 1.8rem;
+  }
+  main.viner .product-listing p.in-stock {
+    font-size: 1.4rem;
+  }
 }/*# sourceMappingURL=style.css.map */

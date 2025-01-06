@@ -1,6 +1,5 @@
 label:has(input[type="checkbox"]) {
   @include flex(center, center, row);
-  font-size: $p-font;
   cursor: pointer;
 }
 

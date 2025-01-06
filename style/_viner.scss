@@ -1,8 +1,13 @@
 main.viner {
-  .products {
+  .product-listing {
+    @include flex(normal, center, row);
+    margin-bottom: 10rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     .filters {
       width: 23.6rem;
       margin-bottom: 5rem;
+      margin-right: 5rem;
     }
     p.search-results {
       margin: 2rem 0;
@@ -11,7 +16,7 @@ main.viner {
       border-bottom: 0.1rem solid $divider-color;
       border-top: 0.1rem solid $divider-color;
     }
-    h4 {
+    h4.filter-header {
       margin-top: 2rem;
       margin-bottom: 3rem;
     }
@@ -41,6 +46,171 @@ main.viner {
       p.valuta {
         font-size: $input-text-font;
         margin-left: 1rem;
+      }
+    }
+    .products {
+      @include grid(
+        $columns: repeat(2, 1fr),
+        $column-gap: 2rem,
+        $row-gap: 3rem,
+        $justify: center
+      );
+      width: 100%;
+    }
+    a:hover,
+    a:hover + .product-info-container {
+      h4,
+      p.description {
+        text-decoration: underline;
+      }
+    }
+    // Note: Firefox renders elements weirdly when using transform.
+    // I've replaced flexbox with display: inline-block in certain elements because otherwise flexbox will make paragraphs and images jump around a lot more when transforming on hover (again, only on firefox).
+    article {
+      @include flex(normal, normal, row);
+      min-height: 35rem;
+      padding: 2rem;
+      background-color: $secondary-color;
+      border-radius: 1.5rem;
+      transition: all 0.25s ease-in-out;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: translateY(-0.2rem);
+      }
+    }
+    img.product-img {
+      padding-right: 2rem;
+    }
+    .product-info-container {
+      width: 100%;
+    }
+    .country-label-container {
+      @include flex(normal, normal, row);
+      position: relative;
+    }
+    img.flag {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    p.country {
+      color: $font-color-opacity-80;
+      padding-left: 0.8rem;
+    }
+    p.type {
+      text-decoration: underline;
+      letter-spacing: 0.23rem;
+      padding-bottom: 1.2rem;
+    }
+    h4.title {
+      padding-bottom: 0.3rem;
+    }
+    p.description {
+      font-size: $h4-font;
+      padding-bottom: 1.2rem;
+    }
+    .country-label-container {
+      padding-bottom: 1.2rem;
+    }
+    p.price {
+      font-size: $h4-font;
+      padding: 1.2rem 0;
+      font-weight: 700;
+      border-top: 0.1rem solid $divider-color;
+      border-bottom: 0.1rem solid $divider-color;
+    }
+    p.volume {
+      color: $font-color-opacity-80;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 0.1rem solid $divider-color;
+    }
+    .in-stock-add-to-cart-button {
+      position: relative;
+      width: 100%;
+      margin-top: 1.3rem;
+      height: 4rem;
+    }
+    .in-stock-container {
+      display: inline-block;
+      position: absolute;
+      top: calc(50% - 1.2rem);
+    }
+    img.in-stock-img {
+      display: inline-block;
+      padding-right: 0.8rem;
+    }
+    p.in-stock {
+      position: absolute;
+      font-size: $p-subheading-font;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    button {
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      float: right;
+      background-color: $button-add-to-cart-color;
+      &:hover {
+        background-color: $button-add-to-cart-color-hover;
+      }
+    }
+    img.add-to-cart-img {
+      position: absolute;
+      top: calc(50% - 1.2rem);
+      left: calc(50% - 1.2rem);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main.viner {
+    .product-listing {
+      .products {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  main.viner {
+    .headline {
+      margin-bottom: 3rem;
+    }
+    .product-listing {
+      flex-direction: column;
+      align-items: center;
+      .filters {
+        margin-right: 0;
+      }
+      p.search-results,
+      h4.filter-header {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main.viner {
+    .product-listing {
+      .products {
+        min-width: 28.7rem;
+      }
+      p.description {
+        font-size: $h4-mobile-font;
+      }
+      p.country {
+        padding-top: 0.2rem;
+      }
+      p.price {
+        font-size: $h4-mobile-font;
+      }
+      p.in-stock {
+        font-size: $p-mobile-subheading-font;
       }
     }
   }
