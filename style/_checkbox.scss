@@ -14,7 +14,7 @@ input[type="checkbox"] {
   margin-right: 1rem;
   background-color: $secondary-color;
   border-radius: 0.5rem;
-  outline: 0.1rem solid $font-color;
+  border: 0.1rem solid $font-color;
   cursor: pointer;
   transition: background-color 0.15s ease-in-out;
 }
