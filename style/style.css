@@ -781,6 +781,9 @@ main.viner .product-listing .price-input-boxes {
   flex-direction: row;
   font-size: 1.8rem;
 }
+main.viner .product-listing .price-input-boxes .input-box:first-child {
+  margin-right: 2rem;
+}
 main.viner .product-listing .price-input-boxes .input-container {
   display: flex;
   align-items: center;

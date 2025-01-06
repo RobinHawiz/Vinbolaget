@@ -29,6 +29,9 @@ main.viner {
     .price-input-boxes {
       @include flex(center, space-between, row);
       font-size: $p-font;
+      .input-box:first-child {
+        margin-right: 2rem;
+      }
       .input-container {
         @include flex(center, space-between, row);
         margin-top: 1rem;
