@@ -12,11 +12,12 @@ header {
   font-size: $nav-font;
   .header-content {
     @include flex(center, space-between, row);
-    width: 125rem;
+    width: 100%;
+    max-width: 125rem;
     margin: auto;
     background-color: $primary-color;
     min-height: 10vh;
-    padding: 2rem 0;
+    padding: 2rem 5rem;
   }
   .logo-search-container {
     @include flex(center, space-between, row);
@@ -122,9 +123,8 @@ header {
 @media screen and (max-width: 1250px) {
   header {
     .header-content {
-      width: 100%;
       margin: 0;
-      padding: 0 5rem;
+      padding: 2rem 5rem;
     }
     form {
       margin-left: 4.2vw;

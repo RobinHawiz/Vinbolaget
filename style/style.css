@@ -147,11 +147,12 @@ header .header-content {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  width: 125rem;
+  width: 100%;
+  max-width: 125rem;
   margin: auto;
   background-color: #f5f5f5;
   min-height: 10vh;
-  padding: 2rem 0;
+  padding: 2rem 5rem;
 }
 header .logo-search-container {
   display: flex;
@@ -259,9 +260,8 @@ header .sveriges-godaste-hamburgare:hover .menu {
 
 @media screen and (max-width: 1250px) {
   header .header-content {
-    width: 100%;
     margin: 0;
-    padding: 0 5rem;
+    padding: 2rem 5rem;
   }
   header form {
     margin-left: 4.2vw;
@@ -396,15 +396,11 @@ header .sveriges-godaste-hamburgare:hover .menu {
   }
 }
 main {
-  width: 125rem;
+  width: 100%;
+  max-width: 125rem;
   margin: auto;
 }
 
-@media screen and (max-width: 1250px) {
-  main {
-    width: 100%;
-  }
-}
 label:has(input[type=checkbox]) {
   display: flex;
   align-items: center;
@@ -453,7 +449,8 @@ footer .footer-content {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  width: 125rem;
+  width: 100%;
+  max-width: 125rem;
   min-height: 10vh;
   margin: auto;
   padding: 2rem 0;
@@ -477,7 +474,6 @@ footer a:hover {
 
 @media screen and (max-width: 1250px) {
   footer .footer-content {
-    width: 100%;
     margin: 0;
     padding: 2rem 5rem;
   }
