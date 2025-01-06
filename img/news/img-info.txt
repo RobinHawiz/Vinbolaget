@@ -1,3 +1,0 @@
-jpg -> 60% compression.
-webp -> 90% compression.
-avif -> 50% compression.
