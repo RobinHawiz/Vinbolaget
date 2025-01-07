@@ -1,0 +1,108 @@
+main.varukorg {
+  .varor,
+  .leverans {
+    @include flex(center, center, column);
+    width: 65rem;
+    margin: auto;
+    margin-bottom: 7rem;
+  }
+  .varor {
+    .labels,
+    article {
+      @include grid($columns: 4fr 1fr 1fr);
+      width: 100%;
+    }
+    .labels {
+      padding: 0 1.5rem;
+    }
+    p.quantity,
+    p.price {
+      align-self: center;
+      text-align: center;
+    }
+    article {
+      margin-top: 2rem;
+      padding: 1.5rem 1.2rem;
+      background-color: $secondary-color;
+      border-radius: 1.5rem;
+    }
+
+    .product-name-and-img {
+      @include flex(center, normal, row);
+    }
+    h3 {
+      margin-left: 3rem;
+      font-weight: 400;
+    }
+    .total {
+      @include flex(center, space-between, row);
+      width: 100%;
+      margin-top: 3rem;
+      padding: 0 2rem;
+      font-weight: 700;
+    }
+  }
+  .leverans {
+    h2 {
+      margin-bottom: 5rem;
+    }
+    form {
+      width: 100%;
+      padding-top: 3rem;
+      padding-bottom: 5rem;
+      background-color: $secondary-color;
+      border-radius: 1.5rem;
+    }
+    .input-box-container {
+      @include grid(
+        $columns: repeat(auto-fill, 25rem),
+        $justify: center,
+        $row-gap: 2rem,
+        $column-gap: 3rem
+      );
+      margin: 0 1rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    input {
+      width: 25rem;
+      height: 4rem;
+      padding-left: 1rem;
+      border: 0.1rem solid $font-color;
+      border-radius: 0.5rem;
+    }
+    button {
+      display: block;
+      margin: auto;
+      margin-top: 4rem;
+      padding: 1.5rem 4rem;
+      letter-spacing: 0.23rem;
+      background-color: $font-color;
+      color: $secondary-color;
+      font-size: $p-font;
+      &:hover {
+        background-color: $links-color-hover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 665px) {
+  main.varukorg {
+    .varor,
+    .leverans {
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+    .leverans {
+      h2 {
+        margin-bottom: 3rem;
+      }
+      button {
+        font-size: $p-mobile-font;
+      }
+    }
+  }
+}

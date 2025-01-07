@@ -956,4 +956,111 @@ main.viner .product-listing img.add-to-cart-img {
   main.viner .product-listing p.in-stock {
     font-size: 1.4rem;
   }
+}
+main.varukorg .varor,
+main.varukorg .leverans {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 65rem;
+  margin: auto;
+  margin-bottom: 7rem;
+}
+main.varukorg .varor .labels,
+main.varukorg .varor article {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  width: 100%;
+}
+main.varukorg .varor .labels {
+  padding: 0 1.5rem;
+}
+main.varukorg .varor p.quantity,
+main.varukorg .varor p.price {
+  align-self: center;
+  text-align: center;
+}
+main.varukorg .varor article {
+  margin-top: 2rem;
+  padding: 1.5rem 1.2rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+main.varukorg .varor .product-name-and-img {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: row;
+}
+main.varukorg .varor h3 {
+  margin-left: 3rem;
+  font-weight: 400;
+}
+main.varukorg .varor .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 3rem;
+  padding: 0 2rem;
+  font-weight: 700;
+}
+main.varukorg .leverans h2 {
+  margin-bottom: 5rem;
+}
+main.varukorg .leverans form {
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+main.varukorg .leverans .input-box-container {
+  display: grid;
+  row-gap: 2rem;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  grid-template-columns: repeat(auto-fill, 25rem);
+  justify-content: center;
+  margin: 0 1rem;
+}
+main.varukorg .leverans label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+main.varukorg .leverans input {
+  width: 25rem;
+  height: 4rem;
+  padding-left: 1rem;
+  border: 0.1rem solid #212121;
+  border-radius: 0.5rem;
+}
+main.varukorg .leverans button {
+  display: block;
+  margin: auto;
+  margin-top: 4rem;
+  padding: 1.5rem 4rem;
+  letter-spacing: 0.23rem;
+  background-color: #212121;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+main.varukorg .leverans button:hover {
+  background-color: #616161;
+}
+
+@media screen and (max-width: 665px) {
+  main.varukorg .varor,
+  main.varukorg .leverans {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  main.varukorg .leverans h2 {
+    margin-bottom: 3rem;
+  }
+  main.varukorg .leverans button {
+    font-size: 1.6rem;
+  }
 }/*# sourceMappingURL=style.css.map */
