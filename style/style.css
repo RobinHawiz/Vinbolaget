@@ -106,6 +106,19 @@ img {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  width: 0.1rem;
+  height: 0.1rem;
+  position: absolute;
+  overflow: hidden;
+  -webkit-clip-path: inset(0);
+          clip-path: inset(0);
+}
+
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 2.6rem;
@@ -439,6 +452,91 @@ input[type=checkbox]:before {
   background-image: url("../icon/iconmonstr-check-mark.svg");
   width: 1.4rem;
   height: 1.4rem;
+}
+
+.gallery {
+  background-color: #ffffff;
+  padding: 3.2rem 1.6rem;
+}
+.gallery .display-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50rem;
+  height: 55rem;
+  margin-bottom: 1rem;
+  background-color: #f5f5f5;
+}
+.gallery .img-wrapper {
+  width: 10.6rem;
+  height: 45rem;
+}
+.gallery img.gallery-img {
+  width: 100%;
+  height: 100%;
+}
+.gallery .video-wrapper {
+  width: 30rem;
+  height: 55rem;
+}
+.gallery video.gallery-video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery ul {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: row;
+}
+.gallery button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 5.2rem;
+  height: 6rem;
+  background-color: #f5f5f5;
+}
+.gallery button:first-child {
+  margin-right: 1rem;
+}
+
+.gallery-expanded {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+.gallery-expanded .gallery-display-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100rem;
+  height: 65rem;
+  background-color: #f5f5f5;
+  z-index: 2;
+  border-radius: 4rem;
+}
+.gallery-expanded button {
+  width: 4rem;
+  height: 4rem;
+}
+.gallery-expanded .gallery-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 1;
+  background-color: #212121;
 }
 
 footer {
@@ -1063,4 +1161,7 @@ main.varukorg .leverans button:hover {
   main.varukorg .leverans button {
     font-size: 1.6rem;
   }
+}
+main.produkt .banner-wrapper {
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */

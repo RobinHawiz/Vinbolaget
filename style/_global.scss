@@ -195,6 +195,20 @@ img {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
+// WAI-ARIA styling
+
+.visually-hidden {
+  width: 0.1rem;
+  height: 0.1rem;
+  position: absolute;
+  overflow: hidden;
+  clip-path: inset(0);
+}
+
 // Styling for mobile
 
 @media screen and (max-width: 480px) {
