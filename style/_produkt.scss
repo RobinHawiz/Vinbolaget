@@ -2,4 +2,108 @@ main.produkt {
   .banner-wrapper {
     margin-bottom: 0;
   }
+  .gallery-and-about-container {
+    @include flex(normal, normal, row);
+    background-color: $secondary-color;
+    padding: 3.2rem 1.6rem;
+  }
+
+  .about {
+    width: 100%;
+    margin-left: 6rem;
+    p.type {
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.23rem;
+      text-decoration: underline;
+    }
+    h2 {
+      margin-bottom: 0.6rem;
+      font-size: $h2-alternate-font;
+      font-weight: 700;
+    }
+    p.year {
+      padding-bottom: 2rem;
+      font-size: $h2-alternate-font;
+    }
+    .country-label-container {
+      @include flex(center, normal, row);
+      margin-bottom: 1.2rem;
+      color: $font-color-opacity-80;
+    }
+    img.flag {
+      margin-right: 0.8rem;
+    }
+    p.price {
+      padding: 1.2rem 0;
+      font-size: $h2-alternate-font;
+      font-weight: 700;
+      border-top: 0.1rem solid $divider-color;
+      border-bottom: 0.1rem solid $divider-color;
+    }
+    p.volume {
+      padding: 1.2rem 0;
+      color: $font-color-opacity-80;
+      border-bottom: 0.1rem solid $divider-color;
+    }
+    p.long-description {
+      padding: 1.2rem 0;
+      border-bottom: 0.1rem solid $divider-color;
+      line-height: 3rem;
+    }
+    form {
+      @include flex(center, normal, row);
+      margin-top: 3.2rem;
+    }
+    input {
+      width: 7rem;
+      height: 6.3rem;
+      padding: 0 1rem;
+      margin-right: 1rem;
+      font-size: $p-font;
+      background-color: $primary-color;
+      border: 0.1rem solid $font-color;
+    }
+    button {
+      padding: 2rem 4rem;
+      letter-spacing: 0.23rem;
+      background-color: $font-color;
+      color: $secondary-color;
+      font-size: $p-font;
+      &:hover {
+        background-color: $links-color-hover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  main.produkt {
+    .gallery-and-about-container {
+      align-items: center;
+      flex-direction: column;
+    }
+    .about {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main.produkt {
+    .gallery-and-about-container {
+      align-items: center;
+      flex-direction: column;
+    }
+    .about {
+      margin: 0;
+      h2,
+      p.year,
+      p.price {
+        font-size: $h2-mobile-alternate-font;
+      }
+      button {
+        padding: 2rem 2rem;
+      }
+    }
+  }
 }

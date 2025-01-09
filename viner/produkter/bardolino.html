@@ -103,106 +103,141 @@
           />
         </picture>
       </div>
-      <section class="gallery" aria-labelledby="galleryheading">
-        <h2 class="visually-hidden">Bild- och videogalleri</h2>
-        <div class="display-area">
-          <div class="img-wrapper gallery-item active">
-            <picture>
-              <source
-                type="image/webp"
-                media="(max-width: 480px)"
-                srcset="
-                  ../../img/products/product-page/bardolino/bardolino-product-page-mobile@1x.webp 1x,
-                  ../../img/products/product-page/bardolino/bardolino-product-page-mobile@2x.webp 2x,
-                  ../../img/products/product-page/bardolino/bardolino-product-page-mobile@3x.webp 3x
-                "
-              />
-              <source
-                type="image/png"
-                media="(max-width: 480px)"
-                srcset="
-                  ../../img/products/product-page/bardolino/bardolino-product-page-mobile@1x.png 1x,
-                  ../../img/products/product-page/bardolino/bardolino-product-page-mobile@2x.png 2x,
-                  ../../img/products/product-page/bardolino/bardolino-product-page-mobile@3x.png 3x
-                "
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  ../../img/products/product-page/bardolino/bardolino-product-page@1x.webp 1x,
-                  ../../img/products/product-page/bardolino/bardolino-product-page@2x.webp 2x,
-                  ../../img/products/product-page/bardolino/bardolino-product-page@3x.webp 3x
-                "
-              />
-              <source
-                type="image/png"
-                srcset="
-                  ../../img/products/product-page/bardolino/bardolino-product-page@1x.png 1x,
-                  ../../img/products/product-page/bardolino/bardolino-product-page@2x.png 2x,
-                  ../../img/products/product-page/bardolino/bardolino-product-page@3x.png 3x
-                "
-              />
-              <img
-                class="gallery-img"
-                src="../../img/products/product-page/bardolino/bardolino-product-page@1x.png"
-                alt="Vinflaskan Bardolino"
-                loading="lazy"
-              />
-            </picture>
-          </div>
-          <div class="video-wrapper gallery-item hidden">
-            <video class="gallery-video" controls>
-              <source
-                src="../../video/bardolino/bardolino-video-nr1@vp9.webm"
-                type="video/webm"
-              />
-              <source
-                src="../../video/bardolino/bardolino-video-nr1@h264.mp4"
-                type="video/mp4"
-              />
-              Din webbläsare stöder ej video-formatet.
-            </video>
-          </div>
-        </div>
-        <ul class="gallery-nav">
-          <li>
-            <button data-gallery-item="item-1">
+      <div class="gallery-and-about-container">
+        <section class="gallery" aria-labelledby="galleryheading">
+          <h2 class="visually-hidden">Bild- och videogalleri</h2>
+          <div class="display-area">
+            <div class="img-wrapper gallery-item active">
               <picture>
                 <source
                   type="image/webp"
+                  media="(max-width: 480px)"
                   srcset="
-                    ../../img/products/product-page/bardolino/bardolino-product-page-item@1x.webp 1x,
-                    ../../img/products/product-page/bardolino/bardolino-product-page-item@2x.webp 2x,
-                    ../../img/products/product-page/bardolino/bardolino-product-page-item@3x.webp 3x
+                    ../../img/products/product-page/bardolino/bardolino-product-page-mobile@1x.webp 1x,
+                    ../../img/products/product-page/bardolino/bardolino-product-page-mobile@2x.webp 2x,
+                    ../../img/products/product-page/bardolino/bardolino-product-page-mobile@3x.webp 3x
+                  "
+                />
+                <source
+                  type="image/png"
+                  media="(max-width: 480px)"
+                  srcset="
+                    ../../img/products/product-page/bardolino/bardolino-product-page-mobile@1x.png 1x,
+                    ../../img/products/product-page/bardolino/bardolino-product-page-mobile@2x.png 2x,
+                    ../../img/products/product-page/bardolino/bardolino-product-page-mobile@3x.png 3x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ../../img/products/product-page/bardolino/bardolino-product-page@1x.webp 1x,
+                    ../../img/products/product-page/bardolino/bardolino-product-page@2x.webp 2x,
+                    ../../img/products/product-page/bardolino/bardolino-product-page@3x.webp 3x
                   "
                 />
                 <source
                   type="image/png"
                   srcset="
-                    ../../img/products/product-page/bardolino/bardolino-product-page-item@1x.png 1x,
-                    ../../img/products/product-page/bardolino/bardolino-product-page-item@2x.png 2x,
-                    ../../img/products/product-page/bardolino/bardolino-product-page-item@3x.png 3x
+                    ../../img/products/product-page/bardolino/bardolino-product-page@1x.png 1x,
+                    ../../img/products/product-page/bardolino/bardolino-product-page@2x.png 2x,
+                    ../../img/products/product-page/bardolino/bardolino-product-page@3x.png 3x
                   "
                 />
                 <img
-                  class="product-img"
-                  src="../../img/products/product-page/bardolino/bardolino-product-page-item@1x.png"
+                  class="gallery-img"
+                  src="../../img/products/product-page/bardolino/bardolino-product-page@1x.png"
                   alt="Vinflaskan Bardolino"
                   loading="lazy"
                 />
               </picture>
-            </button>
-          </li>
-          <li>
-            <button data-gallery-item="item-2">
-              <img
-                src="../../icon/iconmonstr-video.svg"
-                alt="ikon av en video knapp"
+            </div>
+            <div class="video-wrapper gallery-item hidden">
+              <video class="gallery-video" controls>
+                <source
+                  src="../../video/bardolino/bardolino-video-nr1@vp9.webm"
+                  type="video/webm"
+                />
+                <source
+                  src="../../video/bardolino/bardolino-video-nr1@h264.mp4"
+                  type="video/mp4"
+                />
+                Din webbläsare stöder ej video-formatet.
+              </video>
+            </div>
+          </div>
+          <ul class="gallery-nav">
+            <li>
+              <button data-gallery-item="item-1">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ../../img/products/product-page/bardolino/bardolino-product-page-item@1x.webp 1x,
+                      ../../img/products/product-page/bardolino/bardolino-product-page-item@2x.webp 2x,
+                      ../../img/products/product-page/bardolino/bardolino-product-page-item@3x.webp 3x
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ../../img/products/product-page/bardolino/bardolino-product-page-item@1x.png 1x,
+                      ../../img/products/product-page/bardolino/bardolino-product-page-item@2x.png 2x,
+                      ../../img/products/product-page/bardolino/bardolino-product-page-item@3x.png 3x
+                    "
+                  />
+                  <img
+                    class="product-img"
+                    src="../../img/products/product-page/bardolino/bardolino-product-page-item@1x.png"
+                    alt="Vinflaskan Bardolino"
+                    loading="lazy"
+                  />
+                </picture>
+              </button>
+            </li>
+            <li>
+              <button data-gallery-item="item-2">
+                <img
+                  src="../../icon/iconmonstr-video.svg"
+                  alt="ikon av en video knapp"
+                />
+              </button>
+            </li>
+          </ul>
+        </section>
+        <section class="about">
+          <p class="type">Rött vin</p>
+          <h2 class="title">La Corde del Pozzo</h2>
+          <p class="year">Bardolino, 2023</p>
+          <div class="country-label-container">
+            <img
+              class="flag"
+              src="../../icon/svgrepo-italy.svg"
+              alt="Ikon av Italiens flagga"
+            />
+            <p class="country">Venetien, Italien</p>
+          </div>
+          <p class="price">3000:-</p>
+          <p class="volume">750 ml · 12,5 % vol.</p>
+          <p class="long-description">
+            Bärig, ungdomlig smak med inslag av körsbär, färska örter, hallon
+            och jordgubbar. Serveras vid 14-16°C till vegetariskt eller till
+            rätter av fisk eller ljust kött, gärna kallskuret.
+          </p>
+          <form class="add-to-cart">
+            <div class="input-box">
+              <input
+                aria-label="antal varor"
+                type="number"
+                value="1"
+                min="1"
+                max="99"
+                required
               />
-            </button>
-          </li>
-        </ul>
-      </section>
+            </div>
+            <button type="submit">Lägg i varukorg</button>
+          </form>
+        </section>
+      </div>
     </main>
     <footer>
       <div class="footer-content">
@@ -245,6 +280,7 @@
       </div>
     </footer>
     <script src="../../js/header.js"></script>
+    <script src="../../js/form.js"></script>
     <script src="../../js/gallery.js"></script>
   </body>
 </html>

@@ -1,10 +1,9 @@
 .gallery {
-  background-color: $secondary-color;
-  padding: 3.2rem 1.6rem;
+  width: 100%;
+  max-width: 50rem;
   .display-area {
     @include flex(center, center, column);
-    width: 100%;
-    max-width: 50rem;
+    width: 50rem;
     height: 55rem;
     margin-bottom: 1rem;
     background-color: $primary-color;
@@ -124,6 +123,16 @@
 // Remove the ability to scroll through the page when gallery is expanded.
 body.gallery-expanded-open {
   overflow-y: hidden;
+}
+
+@media screen and (max-width: 940px) {
+  .gallery {
+    margin-bottom: 3rem;
+
+    .display-area {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {

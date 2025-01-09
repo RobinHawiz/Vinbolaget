@@ -455,16 +455,15 @@ input[type=checkbox]:before {
 }
 
 .gallery {
-  background-color: #ffffff;
-  padding: 3.2rem 1.6rem;
+  width: 100%;
+  max-width: 50rem;
 }
 .gallery .display-area {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  max-width: 50rem;
+  width: 50rem;
   height: 55rem;
   margin-bottom: 1rem;
   background-color: #f5f5f5;
@@ -588,6 +587,14 @@ body.gallery-expanded-open {
   overflow-y: hidden;
 }
 
+@media screen and (max-width: 940px) {
+  .gallery {
+    margin-bottom: 3rem;
+  }
+  .gallery .display-area {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 480px) {
   .gallery .display-area {
     height: 29rem;
@@ -1245,4 +1252,111 @@ main.varukorg .leverans button:hover {
 }
 main.produkt .banner-wrapper {
   margin-bottom: 0;
+}
+main.produkt .gallery-and-about-container {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: row;
+  background-color: #ffffff;
+  padding: 3.2rem 1.6rem;
+}
+main.produkt .about {
+  width: 100%;
+  margin-left: 6rem;
+}
+main.produkt .about p.type {
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.23rem;
+  text-decoration: underline;
+}
+main.produkt .about h2 {
+  margin-bottom: 0.6rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+main.produkt .about p.year {
+  padding-bottom: 2rem;
+  font-size: 2.8rem;
+}
+main.produkt .about .country-label-container {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
+  color: rgba(33, 33, 33, 0.8);
+}
+main.produkt .about img.flag {
+  margin-right: 0.8rem;
+}
+main.produkt .about p.price {
+  padding: 1.2rem 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  border-top: 0.1rem solid rgba(37, 37, 37, 0.5);
+  border-bottom: 0.1rem solid rgba(37, 37, 37, 0.5);
+}
+main.produkt .about p.volume {
+  padding: 1.2rem 0;
+  color: rgba(33, 33, 33, 0.8);
+  border-bottom: 0.1rem solid rgba(37, 37, 37, 0.5);
+}
+main.produkt .about p.long-description {
+  padding: 1.2rem 0;
+  border-bottom: 0.1rem solid rgba(37, 37, 37, 0.5);
+  line-height: 3rem;
+}
+main.produkt .about form {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: row;
+  margin-top: 3.2rem;
+}
+main.produkt .about input {
+  width: 7rem;
+  height: 6.3rem;
+  padding: 0 1rem;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  background-color: #f5f5f5;
+  border: 0.1rem solid #212121;
+}
+main.produkt .about button {
+  padding: 2rem 4rem;
+  letter-spacing: 0.23rem;
+  background-color: #212121;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+main.produkt .about button:hover {
+  background-color: #616161;
+}
+
+@media screen and (max-width: 940px) {
+  main.produkt .gallery-and-about-container {
+    align-items: center;
+    flex-direction: column;
+  }
+  main.produkt .about {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  main.produkt .gallery-and-about-container {
+    align-items: center;
+    flex-direction: column;
+  }
+  main.produkt .about {
+    margin: 0;
+  }
+  main.produkt .about h2,
+  main.produkt .about p.year,
+  main.produkt .about p.price {
+    font-size: 2.4rem;
+  }
+  main.produkt .about button {
+    padding: 2rem 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

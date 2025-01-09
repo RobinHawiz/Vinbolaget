@@ -29,6 +29,7 @@ $h1-font: 4.8rem;
 $h1-subheading-font: 2.4rem;
 
 $h2-font: 3.2rem;
+$h2-alternate-font: 2.8rem;
 $h2-subheading-font: 2rem;
 
 $h3-font: 1.8rem;
@@ -53,6 +54,7 @@ $h1-mobile-font: calc($h1-font - 2.2rem);
 $h1-mobile-subheading-font: calc($h1-subheading-font - 0.6rem);
 
 $h2-mobile-font: calc($h2-font - 1rem);
+$h2-mobile-alternate-font: calc($h2-alternate-font - 0.4rem);
 $h2-mobile-subheading-font: calc($h2-subheading-font - 0.2rem);
 
 $h3-mobile-font: calc($h3-font - 0.2rem);
