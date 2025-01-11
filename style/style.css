@@ -121,7 +121,7 @@ img {
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
   p {
     font-size: 1.6rem;
@@ -1333,6 +1333,32 @@ main.produkt .about button {
 main.produkt .about button:hover {
   background-color: #616161;
 }
+main.produkt .product-info {
+  background-color: #ffffff;
+  padding: 0 1.6rem;
+  padding-bottom: 10rem;
+}
+main.produkt .product-info h2 {
+  margin-bottom: 4rem;
+}
+main.produkt .product-info .product-info-content {
+  display: grid;
+  row-gap: 5rem;
+  -moz-column-gap: calc(12.5vw - 12.5rem);
+       column-gap: calc(12.5vw - 12.5rem);
+  grid-template-columns: repeat(2, 1fr);
+}
+main.produkt .product-info article {
+  max-width: 50rem;
+  margin-right: 2rem;
+}
+main.produkt .product-info h3 {
+  font-size: 2.4rem;
+  margin-bottom: 0.2rem;
+}
+main.produkt .product-info p {
+  line-height: 3rem;
+}
 
 @media screen and (max-width: 940px) {
   main.produkt .gallery-and-about-container {
@@ -1343,20 +1369,45 @@ main.produkt .about button:hover {
     margin: 0;
   }
 }
+@media screen and (max-width: 840px) {
+  main.produkt .product-info .product-info-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 @media screen and (max-width: 480px) {
   main.produkt .gallery-and-about-container {
     align-items: center;
     flex-direction: column;
   }
   main.produkt .about {
-    margin: 0;
+    margin-left: 0;
+    margin-bottom: 2rem;
   }
   main.produkt .about h2,
   main.produkt .about p.year,
   main.produkt .about p.price {
     font-size: 2.4rem;
   }
+  main.produkt .about input {
+    width: 6rem;
+    height: 5.1rem;
+    font-size: 1.6rem;
+  }
   main.produkt .about button {
-    padding: 2rem 2rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+  }
+  main.produkt .product-info h2 {
+    margin-bottom: 2rem;
+  }
+  main.produkt .product-info .product-info-content {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 3rem;
+  }
+  main.produkt .product-info article {
+    margin-right: 0;
+  }
+  main.produkt .product-info h3 {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

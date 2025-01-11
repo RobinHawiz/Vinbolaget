@@ -74,6 +74,32 @@ main.produkt {
       }
     }
   }
+  .product-info {
+    background-color: $secondary-color;
+    padding: 0 1.6rem;
+    padding-bottom: 10rem;
+    h2 {
+      margin-bottom: 4rem;
+    }
+    .product-info-content {
+      @include grid(
+        $columns: repeat(2, 1fr),
+        $column-gap: calc(12.5vw - 12.5rem),
+        $row-gap: 5rem
+      );
+    }
+    article {
+      max-width: 50rem;
+      margin-right: 2rem;
+    }
+    h3 {
+      font-size: $h3-alternate-font;
+      margin-bottom: 0.2rem;
+    }
+    p {
+      line-height: 3rem;
+    }
+  }
 }
 
 @media screen and (max-width: 940px) {
@@ -87,7 +113,15 @@ main.produkt {
     }
   }
 }
-
+@media screen and (max-width: 840px) {
+  main.produkt {
+    .product-info {
+      .product-info-content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
 @media screen and (max-width: 480px) {
   main.produkt {
     .gallery-and-about-container {
@@ -95,14 +129,36 @@ main.produkt {
       flex-direction: column;
     }
     .about {
-      margin: 0;
+      margin-left: 0;
+      margin-bottom: 2rem;
       h2,
       p.year,
       p.price {
         font-size: $h2-mobile-alternate-font;
       }
+      input {
+        width: 6rem;
+        height: 5.1rem;
+        font-size: $p-mobile-font;
+      }
       button {
-        padding: 2rem 2rem;
+        padding: 1.5rem 2rem;
+        font-size: $p-mobile-font;
+      }
+    }
+    .product-info {
+      h2 {
+        margin-bottom: 2rem;
+      }
+      .product-info-content {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 3rem;
+      }
+      article {
+        margin-right: 0;
+      }
+      h3 {
+        font-size: $h3-mobile-alternate-font;
       }
     }
   }
