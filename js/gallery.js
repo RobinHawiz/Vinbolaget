@@ -7,7 +7,7 @@ let galleryButtons = document.querySelectorAll(
 );
 
 let path = window.location.pathname;
-let productName = path.split("/").pop();
+let productName = path.split("/").pop().slice(0, -5);
 let totImages = galleryItemsImages.length;
 let totVideos = galleryItemsVideos.length;
 
@@ -181,9 +181,17 @@ function expandGallery() {
     }
   });
 
+  // When the expanded gallery is shown, we want a fixed body
+  // This fixes the issue of being able to scroll on mobile when the expanded gallery is open.
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${window.scrollY}px`;
+
   galleryBackground.addEventListener("click", () => {
     // We remove the expanded gallery when the user clicks outside of the gallery display area.
     galleryExpanded.remove();
+    // When the expanded gallery is hidden, we want to remain at the top of the scroll position
+    document.body.style.position = "";
+    document.body.style.top = "";
     // Adds back the ability to scroll
     toggleScrolling();
   });
@@ -191,6 +199,11 @@ function expandGallery() {
   galleryCloseBtn.addEventListener("click", () => {
     // We remove the expanded gallery when the user clicks on the close button.
     galleryExpanded.remove();
+    // When the expanded gallery is hidden, we want to remain at the top of the scroll position
+    const scrollY = document.body.style.top;
+    document.body.style.position = "";
+    document.body.style.top = "";
+    window.scrollTo(0, parseInt(scrollY) * -1);
     // Adds back the ability to scroll
     toggleScrolling();
   });
