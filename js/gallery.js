@@ -1,4 +1,4 @@
-let body = document.querySelector("body");
+let body = document.body;
 let galleryItems = document.querySelectorAll(".gallery-item");
 let galleryItemsImages = document.querySelectorAll(".gallery-item img");
 let galleryItemsVideos = document.querySelectorAll(".gallery-item video");
@@ -11,6 +11,10 @@ let productName = path.split("/").pop();
 let totImages = galleryItemsImages.length;
 let totVideos = galleryItemsVideos.length;
 let isMobile = userDeviceIsMobile();
+let scrollbarWidth = window.innerWidth - document.body.offsetWidth;
+onresize = () => {
+  scrollbarWidth = window.innerWidth - document.body.offsetWidth;
+};
 
 galleryItemsImages.forEach((img) => {
   img.addEventListener("click", expandGallery);
@@ -229,17 +233,19 @@ function toggleScrolling() {
   if (isMobile) {
     if (body.classList.contains("gallery-expanded-open")) {
       // When the expanded gallery is hidden, we want to remove the fixed position in order to be able to scroll again.
-      document.body.style.position = "";
+      body.style.position = "";
     } else {
       // When the expanded gallery is shown, we want a fixed body
       // This fixes the issue of being able to scroll on mobile when the expanded gallery is open (because setting overflow-y to hidden does not work).
-      document.body.style.position = "fixed";
+      body.style.position = "fixed";
     }
   } else {
     if (body.classList.contains("gallery-expanded-open")) {
       document.body.style.overflowY = "";
+      body.style.paddingRight = 0; // Prevents overlay shifts when the scrollbar reappears.
     } else {
-      document.body.style.overflowY = "hidden";
+      body.style.overflowY = "hidden";
+      body.style.paddingRight = `${scrollbarWidth}px`; // Prevents overlay shifts when the scrollbar is hidden
     }
   }
   body.classList.toggle("gallery-expanded-open");
