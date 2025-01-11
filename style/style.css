@@ -584,10 +584,6 @@ input[type=checkbox]:before {
   background-color: #212121;
 }
 
-body.gallery-expanded-open {
-  overflow-y: hidden;
-}
-
 @media screen and (max-width: 940px) {
   .gallery {
     margin-bottom: 3rem;
