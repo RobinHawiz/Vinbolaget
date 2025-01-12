@@ -40,7 +40,7 @@
   }
 }
 
-// JUST DO THE SAME THING, BUT WITH ARROWS
+// The elements for these stylings are created inside gallery.js when the user clicks on an image inside the gallery.
 
 .gallery-expanded {
   @include flex(center, center, column);
@@ -49,8 +49,8 @@
   height: 100%;
   z-index: 4;
 
-  .gallery-display-area {
-    @include flex(center, space-between, row);
+  .gallery-display-area,
+  .gallery-display-area-one-item {
     position: absolute;
     width: 100%;
     max-width: 100rem;
@@ -60,6 +60,14 @@
     background-color: $primary-color;
     z-index: 2;
     border-radius: 3.5rem;
+  }
+  // Use this styling if the gallery contains more than one item (this gets chosen in gallery.js).
+  .gallery-display-area {
+    @include flex(center, space-between, row);
+  }
+  // Use this styling if the gallery contains only one item (this gets chosen in gallery.js).
+  .gallery-display-area-one-item {
+    @include flex(center, center, column);
   }
 
   .img-wrapper {

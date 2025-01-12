@@ -40,7 +40,12 @@ function expandGallery() {
   galleryBackground.classList.add("gallery-background");
 
   let galleryDisplayArea = document.createElement("div");
-  galleryDisplayArea.classList.add("gallery-display-area");
+  // Use different styling, depending on whether or not the gallery contains more than one item.
+  if (totImages + totVideos > 1) {
+    galleryDisplayArea.classList.add("gallery-display-area");
+  } else {
+    galleryDisplayArea.classList.add("gallery-display-area-one-item");
+  }
 
   let galleryLeftArrowBtn = document.createElement("button");
   let galleryLeftArrowImg = document.createElement("img");
