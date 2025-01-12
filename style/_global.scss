@@ -203,6 +203,10 @@ img {
   display: none;
 }
 
+.active {
+  text-decoration: underline;
+}
+
 // WAI-ARIA styling
 
 .visually-hidden {

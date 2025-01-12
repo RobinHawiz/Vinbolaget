@@ -110,6 +110,10 @@ img {
   display: none;
 }
 
+.active {
+  text-decoration: underline;
+}
+
 .visually-hidden {
   width: 0.1rem;
   height: 0.1rem;
