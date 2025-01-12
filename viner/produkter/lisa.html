@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the loading of google fonts non-render blocking -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
+    <link rel="stylesheet" href="../../style/style.css" />
+    <link rel="icon" type="image/x-icon" href="../../icon/favicon.ico" />
+    <title>Vinbolaget</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo-search-container">
+          <!-- Switches between two different logos for dekstop and mobile.
+           Mobile at max-width: 480px -->
+          <a class="logo-desktop" href="../../index.html"
+            ><img src="../../img/logo/logo.svg" alt="Vinbolagets logga"
+          /></a>
+          <a class="logo-mobile" href="../../index.html"
+            ><img src="../../img/logo/logo-mobile.svg" alt="Vinbolagets logga"
+          /></a>
+          <form
+            class="outside-nav"
+            action="../../viner/viner.html"
+            autocomplete="off"
+          >
+            <input type="search" name="search" placeholder="Sök vin..." />
+          </form>
+        </div>
+        <button class="sveriges-godaste-hamburgare">
+          <span class="menu">Meny</span>
+          <span class="line-container">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </span>
+        </button>
+        <nav class="hideNavbarAnimation">
+          <ul>
+            <li>
+              <a class="link" href="../../omVinbolaget/omvinbolaget.html"
+                >Om Vinbolaget</a
+              >
+            </li>
+            <li><a class="link" href="../../viner/viner.html">Viner</a></li>
+            <li>
+              <a class="link" href="../../varukorg/varukorg.html">Varukorg</a>
+            </li>
+            <li>
+              <!-- Is shown only at max-width: 640px -->
+              <form
+                class="inside-nav"
+                action="../../viner/viner.html"
+                autocomplete="off"
+              >
+                <input type="search" name="search" placeholder="Sök vin..." />
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="produkt">
+      <div class="banner-wrapper">
+        <picture>
+          <source
+            type="image/webp"
+            media="(max-width: 480px)"
+            srcset="
+              ../../img/hero/hero-mobile@1x.webp 1x,
+              ../../img/hero/hero-mobile@1x.webp 2x,
+              ../../img/hero/hero-mobile@1x.webp 3x
+            "
+          />
+          <source
+            type="image/jpg"
+            media="(max-width: 480px)"
+            srcset="
+              ../../img/hero/hero-mobile@1x.jpg 1x,
+              ../../img/hero/hero-mobile@1x.jpg 2x,
+              ../../img/hero/hero-mobile@1x.jpg 3x
+            "
+          />
+          <source type="image/webp" srcset="../../img/hero/hero.webp" />
+          <img
+            src="../../img/hero/hero.jpg"
+            alt="Banner som visar en rad vinflaskor som står på en hylla"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+      <div class="gallery-and-about-container">
+        <section class="gallery" aria-labelledby="gallery-heading">
+          <h2 id="gallery-heading" class="visually-hidden">
+            Bild- och videogalleri
+          </h2>
+          <div class="display-area">
+            <div class="img-wrapper gallery-item active">
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 480px)"
+                  srcset="
+                    ../../img/products/product-page/lisa/lisa-product-page-mobile@1x.webp 1x,
+                    ../../img/products/product-page/lisa/lisa-product-page-mobile@2x.webp 2x,
+                    ../../img/products/product-page/lisa/lisa-product-page-mobile@3x.webp 3x
+                  "
+                />
+                <source
+                  type="image/png"
+                  media="(max-width: 480px)"
+                  srcset="
+                    ../../img/products/product-page/lisa/lisa-product-page-mobile@1x.png 1x,
+                    ../../img/products/product-page/lisa/lisa-product-page-mobile@2x.png 2x,
+                    ../../img/products/product-page/lisa/lisa-product-page-mobile@3x.png 3x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ../../img/products/product-page/lisa/lisa-product-page@1x.webp 1x,
+                    ../../img/products/product-page/lisa/lisa-product-page@2x.webp 2x,
+                    ../../img/products/product-page/lisa/lisa-product-page@3x.webp 3x
+                  "
+                />
+                <source
+                  type="image/png"
+                  srcset="
+                    ../../img/products/product-page/lisa/lisa-product-page@1x.png 1x,
+                    ../../img/products/product-page/lisa/lisa-product-page@2x.png 2x,
+                    ../../img/products/product-page/lisa/lisa-product-page@3x.png 3x
+                  "
+                />
+                <img
+                  class="gallery-img"
+                  src="../../img/products/product-page/lisa/lisa-product-page@1x.lisa/lisa"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+          <ul class="gallery-nav">
+            <li>
+              <button data-gallery-item="item-1">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ../../img/products/product-page/lisa/lisa-product-page-item@1x.webp 1x,
+                      ../../img/products/product-page/lisa/lisa-product-page-item@2x.webp 2x,
+                      ../../img/products/product-page/lisa/lisa-product-page-item@3x.webp 3x
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ../../img/products/product-page/lisa/lisa-product-page-item@1x.png 1x,
+                      ../../img/products/product-page/lisa/lisa-product-page-item@2x.png 2x,
+                      ../../img/products/product-page/lisa/lisa-product-page-item@3x.png 3x
+                    "
+                  />
+                  <img
+                    class="product-img"
+                    src="../../img/products/product-page/lisa/lisa-product-page-item@1x.png"
+                    alt="Vinflaskan Alba Rhino"
+                    loading="lazy"
+                  />
+                </picture>
+              </button>
+            </li>
+          </ul>
+        </section>
+        <section class="about">
+          <p class="type">Rött vin</p>
+          <h2 class="title">Lisa 1503</h2>
+          <p class="year">Sangiovese Primitivo</p>
+          <div class="country-label-container">
+            <img
+              class="flag"
+              src="../../icon/svgrepo-italy.svg"
+              alt="Ikon av Italens flagga"
+            />
+            <p class="country">Italien</p>
+          </div>
+          <p class="price">2300:-</p>
+          <p class="volume">1000 ml · 13,5 % vol.</p>
+          <p class="long-description">
+            Fruktig smak med fatkaraktär, inslag av plommon, choklad, mörka
+            körsbär, peppar och vanilj. Serveras vid 16-18°C till grillade
+            rätter av fläsk- eller lammkött.
+          </p>
+          <form class="add-to-cart">
+            <div class="input-box">
+              <input
+                aria-label="antal varor"
+                type="number"
+                value="1"
+                min="1"
+                max="99"
+                required
+              />
+            </div>
+            <button type="submit">Lägg i varukorg</button>
+          </form>
+        </section>
+      </div>
+      <section class="product-info">
+        <h2>Produktinformation</h2>
+        <div class="product-info-content">
+          <article>
+            <h3>Råvaror</h3>
+            <p>Sangiovese och primitivo.</p>
+          </article>
+          <article>
+            <h3>Producent</h3>
+            <p>Nordic Sea Winery</p>
+          </article>
+          <article>
+            <h3>Ursprung</h3>
+            <p>
+              Distriktet Vinho Verde ligger i Minho i nordvästra Portugal.
+              Området påverkas starkt av närheten till Atlanten och präglas av
+              grönska, svala havsvindar och riklig nederbörd. Druvorna till
+              detta vin kommer från vingårdar i byn Sobrado i kommunen Valongo,
+              cirka två mil från Atlanten. Odlingarna ligger på sluttningar
+              cirka 100 meter över havet och vinrankornas genomsnittliga ålder
+              är cirka tio år.
+            </p>
+          </article>
+          <article>
+            <h3>Visste du att...</h3>
+            <p>
+              Etiketten på Lisa 1503 föreställer målningen Mona Lisa skapad av
+              renässanskonstnären Leonardo da Vinci år 1503.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>
+          Email:
+          <a href="mailto:kundtjanst@vinbolaget.se">kundtjanst@vinbolaget.se</a>
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="#212121"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="#212121"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../../js/header.js"></script>
+    <script src="../../js/form.js"></script>
+    <script src="../../js/gallery.js"></script>
+  </body>
+</html>
