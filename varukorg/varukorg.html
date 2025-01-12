@@ -27,17 +27,18 @@
         <div class="logo-search-container">
           <!-- Switches between two different logos for dekstop and mobile.
            Mobile at max-width: 480px -->
-          <a class="logo-desktop" href="../index.html"
-            ><img src="../img/logo/logo.svg" alt="Vinbolagets logga"
-          /></a>
-          <a class="logo-mobile" href="../index.html"
-            ><img src="../img/logo/logo-mobile.svg" alt="Vinbolagets logga"
-          /></a>
-          <form
-            class="outside-nav"
-            action="../viner/viner.html"
-            autocomplete="off"
-          >
+          <a class="logo" href="..">
+            <picture>
+              <source
+                type="image/svg+xml"
+                media="(max-width: 480px)"
+                srcset="../img/logo/logo-mobile.svg"
+              />
+              <source type="image/svg+xml" srcset="../img/logo/logo.svg" />
+              <img src="../img/logo/logo.svg" alt="Vinbolagets logga" />
+            </picture>
+          </a>
+          <form class="outside-nav" action="../viner/viner" autocomplete="off">
             <input type="search" name="search" placeholder="Sök vin..." />
           </form>
         </div>

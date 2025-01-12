@@ -173,21 +173,11 @@ header .logo-search-container {
   justify-content: space-between;
   flex-direction: row;
 }
-header .logo-desktop {
+header .logo {
   width: 16.3rem;
   height: 4.4rem;
 }
-header .logo-desktop img {
-  width: 100%;
-  height: 100%;
-}
-header .logo-mobile {
-  margin-top: 0.2rem;
-  width: 4rem;
-  height: 4.8rem;
-  display: none;
-}
-header .logo-mobile img {
+header .logo img {
   width: 100%;
   height: 100%;
 }
@@ -333,11 +323,14 @@ header .sveriges-godaste-hamburgare:hover .menu {
   }
 }
 @media screen and (max-width: 480px) {
-  header .logo-desktop {
-    display: none;
+  header .logo {
+    margin-top: 0.2rem;
+    width: 4rem;
+    height: 4.8rem;
   }
-  header .logo-mobile {
-    display: block;
+  header .logo img {
+    width: 100%;
+    height: 100%;
   }
 }
 @keyframes showNavbar {
