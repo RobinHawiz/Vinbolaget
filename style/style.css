@@ -1255,6 +1255,12 @@ main.varukorg .leverans button:hover {
 }
 
 @media screen and (max-width: 665px) {
+  main.varukorg .varor .labels,
+  main.varukorg .varor article {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1.3fr;
+    width: 100%;
+  }
   main.varukorg .varor,
   main.varukorg .leverans {
     width: 100%;
