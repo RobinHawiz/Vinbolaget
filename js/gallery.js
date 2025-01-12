@@ -7,7 +7,7 @@ let galleryButtons = document.querySelectorAll(
 );
 
 let path = window.location.pathname;
-let productName = path.split("/").pop().slice(0, -5);
+let productName = path.split("/").pop();
 let totImages = galleryItemsImages.length;
 let totVideos = galleryItemsVideos.length;
 let isMobile = userDeviceIsMobile();
@@ -77,10 +77,10 @@ function expandGallery() {
 
     let galleryImg = document.createElement("img");
     galleryImg.src = `../../img/products/product-page/${productName}/${productName}-product-page-expanded-nr${i}@1x.png`;
-    // The string interpolation capitalizes the first letter in the product name.
-    galleryImg.alt = `Vinflaskan ${
+    // The string interpolation capitalizes the first letter in the product name and replaces any hypens with a space.
+    galleryImg.alt = `Vinflaskan ${(
       productName.charAt(0).toUpperCase() + productName.slice(1)
-    }`;
+    ).replace("-", " ")}`;
 
     let gallerySourcePng = document.createElement("source");
     gallerySourcePng.type = `image/png`;
