@@ -7,7 +7,7 @@ let galleryButtons = document.querySelectorAll(
 );
 
 let path = window.location.pathname;
-let productName = path.split("/").pop();
+let productName = path.split("/").pop().slice(0, -5);
 let totImages = galleryItemsImages.length;
 let totVideos = galleryItemsVideos.length;
 let isMobile = userDeviceIsMobile();
