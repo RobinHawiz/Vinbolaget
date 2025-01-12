@@ -167,16 +167,16 @@ main.startsida {
     }
     section.latest-news {
       .news {
-        p.date {
-          font-size: $p-mobile-subheading-font;
-        }
-      }
-    }
-    section.latest-news {
-      .news {
         grid-template-columns: repeat(1, 21.8rem);
         article {
           height: 35rem;
+        }
+        img {
+          width: 21.8rem;
+          height: 20.9rem;
+        }
+        p.date {
+          font-size: $p-mobile-subheading-font;
         }
       }
     }

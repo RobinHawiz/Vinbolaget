@@ -817,14 +817,18 @@ main.startsida section.latest-news .news h3 {
   main.startsida section.most-sold-products a p.country {
     font-size: 1.4rem;
   }
-  main.startsida section.latest-news .news p.date {
-    font-size: 1.4rem;
-  }
   main.startsida section.latest-news .news {
     grid-template-columns: repeat(1, 21.8rem);
   }
   main.startsida section.latest-news .news article {
     height: 35rem;
+  }
+  main.startsida section.latest-news .news img {
+    width: 21.8rem;
+    height: 20.9rem;
+  }
+  main.startsida section.latest-news .news p.date {
+    font-size: 1.4rem;
   }
 }
 main.om-vinbolaget section.about-company {
