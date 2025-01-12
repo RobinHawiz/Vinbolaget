@@ -757,6 +757,12 @@ main.startsida section.latest-news .news article:hover {
 main.startsida section.latest-news .news article:hover h3 {
   text-decoration: underline;
 }
+main.startsida section.latest-news .news img {
+  width: 28rem;
+  height: 26.8rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
 main.startsida section.latest-news .news .content {
   padding: 2rem 2rem;
 }
