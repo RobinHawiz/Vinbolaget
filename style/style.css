@@ -623,7 +623,8 @@ input[type=checkbox]:before {
     height: 100%;
     z-index: 4;
   }
-  .gallery-expanded .gallery-display-area {
+  .gallery-expanded .gallery-display-area,
+  .gallery-expanded .gallery-display-area-one-item {
     height: 100%;
     max-height: none;
     border-radius: 0;

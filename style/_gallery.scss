@@ -160,7 +160,8 @@
     height: 100%;
     z-index: 4;
 
-    .gallery-display-area {
+    .gallery-display-area,
+    .gallery-display-area-one-item {
       height: 100%;
       max-height: none;
       border-radius: 0;
