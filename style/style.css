@@ -823,6 +823,10 @@ main.startsida section.latest-news .news h3 {
   main.startsida section.most-sold-products article {
     height: 30.8rem;
   }
+  main.startsida section.most-sold-products a img {
+    width: 2.4rem;
+    height: 10.2rem;
+  }
   main.startsida section.most-sold-products a p.country {
     font-size: 1.4rem;
   }
