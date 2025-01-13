@@ -502,6 +502,10 @@ input[type=checkbox]:before {
 .gallery button:first-child {
   margin-right: 1rem;
 }
+.gallery img.product-img {
+  width: 1.2rem;
+  height: 5rem;
+}
 
 .gallery-expanded {
   display: flex;
@@ -1325,6 +1329,8 @@ main.produkt .about .country-label-container {
   color: rgba(33, 33, 33, 0.8);
 }
 main.produkt .about img.flag {
+  width: 2.4rem;
+  height: 2.4rem;
   margin-right: 0.8rem;
 }
 main.produkt .about p.price {
