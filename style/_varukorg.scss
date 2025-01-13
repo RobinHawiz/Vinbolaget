@@ -30,6 +30,10 @@ main.varukorg {
     .product-name-and-img {
       @include flex(center, normal, row);
     }
+    .product-name-and-img img {
+      width: 2.1rem;
+      height: 10rem;
+    }
     h3 {
       margin-left: 3rem;
       font-weight: 400;
@@ -96,6 +100,10 @@ main.varukorg {
       article {
         @include grid($columns: 4fr 1fr 1.3fr);
         width: 100%;
+      }
+      .product-name-and-img img {
+        width: 1.9rem;
+        height: 8rem;
       }
     }
     .varor,
