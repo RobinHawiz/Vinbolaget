@@ -718,6 +718,8 @@ main.startsida section.most-sold-products a {
   height: 100%;
 }
 main.startsida section.most-sold-products a img {
+  width: 4rem;
+  height: 17rem;
   margin-top: 1rem;
 }
 main.startsida section.most-sold-products a p.country {

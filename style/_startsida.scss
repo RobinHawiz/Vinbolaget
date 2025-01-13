@@ -31,6 +31,8 @@ main.startsida {
       @include flex(center, normal, column);
       height: 100%; // Because otherwise the link won't be clickable at the bottom of the product.
       img {
+        width: 4rem;
+        height: 17rem;
         margin-top: 1rem;
       }
       p.country {
