@@ -1102,6 +1102,8 @@ main.viner .product-listing .in-stock-container {
 }
 main.viner .product-listing img.in-stock-img {
   display: inline-block;
+  width: 2.6rem;
+  height: 1.8rem;
   padding-right: 0.8rem;
 }
 main.viner .product-listing p.in-stock {
@@ -1123,6 +1125,8 @@ main.viner .product-listing button:hover {
 }
 main.viner .product-listing img.add-to-cart-img {
   position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
   top: calc(50% - 1.2rem);
   left: calc(50% - 1.2rem);
 }
