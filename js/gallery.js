@@ -226,7 +226,7 @@ function showGalleryItem() {
 
 function toggleGalleryItems(selectedGalleryItem) {
   // Hide the previously shown gallery item.
-  let prevGalleryItem = document.querySelector(".active");
+  let prevGalleryItem = document.querySelector("div.active");
   prevGalleryItem.classList.toggle("active");
   prevGalleryItem.classList.toggle("hidden");
   // Show the selected gallery item.
