@@ -83,6 +83,8 @@ main.viner {
       }
     }
     img.product-img {
+      width: 6.7rem;
+      height: 20rem;
       padding-right: 2rem;
     }
     .product-info-container {
@@ -202,6 +204,11 @@ main.viner {
     .product-listing {
       .products {
         min-width: 28.7rem;
+      }
+      img.product-img {
+        width: 5.5rem;
+        height: 15rem;
+        padding-right: 2rem;
       }
       p.description {
         font-size: $h4-mobile-font;

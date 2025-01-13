@@ -1039,6 +1039,8 @@ main.viner .product-listing article:hover {
   transform: translateY(-0.2rem);
 }
 main.viner .product-listing img.product-img {
+  width: 6.7rem;
+  height: 20rem;
   padding-right: 2rem;
 }
 main.viner .product-listing .product-info-container {
@@ -1149,6 +1151,11 @@ main.viner .product-listing img.add-to-cart-img {
 @media screen and (max-width: 480px) {
   main.viner .product-listing .products {
     min-width: 28.7rem;
+  }
+  main.viner .product-listing img.product-img {
+    width: 5.5rem;
+    height: 15rem;
+    padding-right: 2rem;
   }
   main.viner .product-listing p.description {
     font-size: 1.8rem;
