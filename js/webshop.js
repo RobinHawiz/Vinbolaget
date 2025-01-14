@@ -257,7 +257,7 @@ function showCheckout() {
       `;
     } else {
       // Tomt i listan
-      checkoutEl.innerHTML = `<p style="font-size: 2rem; padding-top: 5rem;">Varukorgen är tom</p>`;
+      checkoutEl.innerHTML = `<p style="font-size: 2rem; padding-top: 5rem; text-align: center;">Varukorgen är tom</p>`;
       totSummaOchVaror.innerHTML += ``;
     }
   }
