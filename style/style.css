@@ -1209,6 +1209,9 @@ main.varukorg .varor p.price {
   align-self: center;
   text-align: center;
 }
+main.varukorg .varor #checkout {
+  width: 100%;
+}
 main.varukorg .varor article {
   margin-top: 2rem;
   padding: 1.5rem 1.2rem;
