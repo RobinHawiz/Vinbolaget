@@ -56,8 +56,9 @@
               <a class="link" href="../om-vinbolaget">Om Vinbolaget</a>
             </li>
             <li><a class="link" href="../viner">Viner</a></li>
-            <li>
-              <a class="active link" href="../varukorg">Varukorg</a>
+            <li class="basket-container">
+              <a class="link" href="../../varukorg">Varukorg</a>
+              <div id="basket"></div>
             </li>
             <li>
               <!-- Is shown only at max-width: 640px -->
@@ -106,106 +107,9 @@
           <p class="quantity">Antal</p>
           <p class="price">Pris</p>
         </div>
-        <article>
-          <div class="product-name-and-img">
-            <picture>
-              <source
-                type="image/webp"
-                media="(max-width: 665px)"
-                srcset="
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page-mobile@1x.webp 1x,
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page-mobile@2x.webp 2x,
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page-mobile@3x.webp 3x
-                "
-              />
-              <source
-                type="image/png"
-                media="(max-width: 665px)"
-                srcset="
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page-mobile@1x.png 1x,
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page-mobile@2x.png 2x,
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page-mobile@3x.png 3x
-                "
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page@1x.webp 1x,
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page@2x.webp 2x,
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page@3x.webp 3x
-                "
-              />
-              <source
-                type="image/png"
-                srcset="
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page@1x.png 1x,
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page@2x.png 2x,
-                  ../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page@3x.png 3x
-                "
-              />
-              <img
-                src="../img/products/shopping-cart-page/bardolino/bardolino-shopping-cart-page@1x.png"
-                alt="Vinflaskan Bardolino"
-                loading="lazy"
-              />
-            </picture>
-            <h3 class="product-name">La Corde del Pozzo - Bardolino, 2023</h3>
-          </div>
-          <p class="quantity">5st</p>
-          <p class="price">15 000:-</p>
-        </article>
-        <article>
-          <div class="product-name-and-img">
-            <picture>
-              <source
-                type="image/webp"
-                media="(max-width: 665px)"
-                srcset="
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page-mobile@1x.webp 1x,
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page-mobile@2x.webp 2x,
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page-mobile@3x.webp 3x
-                "
-              />
-              <source
-                type="image/png"
-                media="(max-width: 665px)"
-                srcset="
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page-mobile@1x.png 1x,
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page-mobile@2x.png 2x,
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page-mobile@3x.png 3x
-                "
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page@1x.webp 1x,
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page@2x.webp 2x,
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page@3x.webp 3x
-                "
-              />
-              <source
-                type="image/png"
-                srcset="
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page@1x.png 1x,
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page@2x.png 2x,
-                  ../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page@3x.png 3x
-                "
-              />
-              <img
-                src="../img/products/shopping-cart-page/oddbird/oddbird-shopping-cart-page@1x.png"
-                alt="Vinflaskan Oddbird"
-                loading="lazy"
-              />
-            </picture>
-            <h3 class="product-name">Oddbird Presence - Non Alcoholic</h3>
-          </div>
-          <p class="quantity">3st</p>
-          <p class="price">3 300:-</p>
-        </article>
-        <div class="total">
-          <p class="total-quantity">Totalt (8 varor)</p>
-          <p class="total-price">18 300:-</p>
-        </div>
+        <div id="checkout"></div>
+
+        <div class="total"></div>
       </div>
       <section class="leverans">
         <h2>Leverans</h2>
@@ -228,7 +132,9 @@
               <input id="county" type="text" required />
             </div>
           </div>
-          <button type="submit">Slutför köp</button>
+          <button onclick="checkoutBasket(event)" type="submit">
+            Slutför köp
+          </button>
         </form>
       </section>
     </main>
@@ -273,6 +179,6 @@
       </div>
     </footer>
     <script src="../js/header.js"></script>
-    <script src="../js/varukorg.js"></script>
+    <script src="../js/webshop.js"></script>
   </body>
 </html>

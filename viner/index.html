@@ -56,9 +56,11 @@
               <a class="link" href="../om-vinbolaget">Om Vinbolaget</a>
             </li>
             <li><a class="active link" href="../viner">Viner</a></li>
-            <li>
-              <a class="link" href="../varukorg">Varukorg</a>
+            <li class="basket-container">
+              <a class="link" href="../../varukorg">Varukorg</a>
+              <div id="basket"></div>
             </li>
+
             <li>
               <!-- Is shown only at max-width: 640px -->
               <form class="inside-nav" action="../viner/" autocomplete="off">
@@ -211,7 +213,9 @@
                   />
                   <p class="in-stock">10 i lager</p>
                 </div>
-                <button>
+                <button
+                  onclick="addToBasket(this, '002', 'La Corde del Pozzo - Bardolino, 2023', 1 ,3000, 'bardolino', true)"
+                >
                   <img
                     class="add-to-cart-img"
                     src="../icon/iconmonstr-shopping-cart.svg"
@@ -291,7 +295,9 @@
                   />
                   <p class="in-stock">17 i lager</p>
                 </div>
-                <button>
+                <button
+                  onclick="addToBasket(this, '003', 'Crazy Cat - Chardonnay, 2024', 1 ,1500, 'crazy-cat', true)"
+                >
                   <img
                     class="add-to-cart-img"
                     src="../icon/iconmonstr-shopping-cart.svg"
@@ -371,7 +377,9 @@
                   />
                   <p class="in-stock">8 i lager</p>
                 </div>
-                <button>
+                <button
+                  onclick="addToBasket(this, '001', 'Alba Rhino - Vinho Verde, 2023', 1 ,4700, 'alba-rhino', true)"
+                >
                   <img
                     class="add-to-cart-img"
                     src="../icon/iconmonstr-shopping-cart.svg"
@@ -451,7 +459,9 @@
                   />
                   <p class="in-stock">21 i lager</p>
                 </div>
-                <button>
+                <button
+                  onclick="addToBasket(this, '005', 'Oddbird Presence - Non Alcoholic', 1 ,1100, 'oddbird', true)"
+                >
                   <img
                     class="add-to-cart-img"
                     src="../icon/iconmonstr-shopping-cart.svg"
@@ -531,7 +541,9 @@
                   />
                   <p class="in-stock">2 i lager</p>
                 </div>
-                <button>
+                <button
+                  onclick="addToBasket(this, '004', 'Lisa 1503 - Sangiovese Primitivo', 1 ,2300, 'lisa', true)"
+                >
                   <img
                     class="add-to-cart-img"
                     src="../icon/iconmonstr-shopping-cart.svg"
@@ -585,5 +597,6 @@
       </div>
     </footer>
     <script src="../js/header.js"></script>
+    <script src="../js/webshop.js"></script>
   </body>
 </html>

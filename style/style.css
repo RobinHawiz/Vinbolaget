@@ -224,6 +224,9 @@ header nav ul {
   justify-content: space-between;
   flex-direction: row;
 }
+header nav li.basket-container {
+  position: relative;
+}
 header .sveriges-godaste-hamburgare {
   display: flex;
   align-items: center;

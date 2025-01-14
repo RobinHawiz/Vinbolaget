@@ -65,6 +65,9 @@ header {
     ul {
       @include flex(center, space-between, row);
     }
+    li.basket-container {
+      position: relative;
+    }
   }
   .sveriges-godaste-hamburgare {
     @include flex(center, center, row);

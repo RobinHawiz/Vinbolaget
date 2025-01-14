@@ -58,8 +58,9 @@
             <li>
               <a class="active link" href="../../viner">Viner</a>
             </li>
-            <li>
+            <li class="basket-container">
               <a class="link" href="../../varukorg">Varukorg</a>
+              <div id="basket"></div>
             </li>
             <li>
               <!-- Is shown only at max-width: 640px -->
@@ -204,6 +205,8 @@
           <form class="add-to-cart">
             <div class="input-box">
               <input
+                id="numOfItems"
+                name="numOfItems"
                 aria-label="antal varor"
                 type="number"
                 value="1"
@@ -212,7 +215,11 @@
                 required
               />
             </div>
-            <button type="submit">Lägg i varukorg</button>
+            <button
+              onclick="addToBasket(this, '001', 'Alba Rhino - Vinho Verde, 2023', document.getElementById('numOfItems').value ,4700, 'alba-rhino', true)"
+            >
+              Lägg i varukorg
+            </button>
           </form>
         </section>
       </div>
@@ -297,5 +304,6 @@
     <script src="../../js/header.js"></script>
     <script src="../../js/form.js"></script>
     <script src="../../js/gallery.js"></script>
+    <script src="../../js/webshop.js"></script>
   </body>
 </html>
